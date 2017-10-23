@@ -1,0 +1,65 @@
+.link1{
+	text-decoration: none;
+	color: #FFF;
+}
+.link1:hover , .link1:active{
+	background-color: #ff5345;
+	color: #ae342a;
+}
+.link2{
+	text-decoration: none;
+	color: #FFF;
+}
+.link2:hover , .link2:active{
+	background-color: #ff7e16;
+	color: #b04a11;
+}
+.link3{
+	text-decoration: none;
+	color: #FFF;
+}
+.link3:hover , .link3:active{
+	background-color: #ffca26;
+	color: #9c790f;
+}
+.pic {
+	float: left;
+	margin-left:300px;
+	margin-top:150px;
+}
+.NameId>p {
+	float: left;
+	margin-top:540px;
+	margin-left: -280px;
+	color: #FFF;
+	font-size: 20px;
+}
+.cycle1{
+	float: left;
+	margin-top:250px;
+	margin-left: 20px;
+}
+.cycle2{
+	float: left;
+	margin-top:170px;
+	margin-left: 20px;
+}
+.cycle3{
+	float: left;
+	margin-top:50px;
+	margin-left: 20px;
+	z-index: 1;
+}
+.incycle{
+	float: left;
+	margin-top:80px;
+	margin-left: -270px;
+	z-index: 2;
+	font-size: 34px;
+	color: #FFF;
+}
+.print{
+	float: left;
+	margin-top:-10%;
+	margin-left: 85%;
+}

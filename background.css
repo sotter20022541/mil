@@ -1,0 +1,41 @@
+body {
+	background-image: url("backgound.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+  background-attachment: fixed;
+  font-family: "Open Sans Condensed";
+}
+
+.bar{
+	margin: -8px;
+	height: 50px;
+	background-color:#000014;
+}
+
+.link{
+	text-decoration: none;
+	color: #FFF;
+}
+
+.link:hover , .link:active{
+	background-color: #000014;
+	color: #40494e;
+}
+
+.bar-in{
+	font-size: 25px;
+	color: #FFF;
+}
+
+.L{
+	float: left;
+	margin-top:12.5px;
+	margin-left:20px;
+}
+
+.R{
+	float: right;
+	margin-top:12.5px;
+	margin-right: 20px;
+}
