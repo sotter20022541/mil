@@ -106,20 +106,25 @@ body {
 
 .profileleft{
 
-	margin-top: -250px;
-	margin-left: 100px;
+	margin-top: -20%;
+	margin-left: 15%;
 	color: #FFF;
 }
 
 .profileright{
 
-	margin-top: -285px;
-	margin-left: 900px;
+	margin-top: -21.5%;
+	margin-left: 70%;
 	color: #FFF;
 }
 
 .pic2{
-	z-index: 3;
+	margin-top: 150px;
+}
+
+.profineclk{
+	margin-top: 7%;
+	margin-right: 3%;
 }
 
 .Edityourinfomation{
