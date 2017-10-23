@@ -106,25 +106,25 @@ body {
 
 .profileleft{
 
-	margin-top: -20%;
+	margin-top: -18%;
 	margin-left: 15%;
 	color: #FFF;
 }
 
 .profileright{
 
-	margin-top: -21.5%;
+	margin-top: -24%;
 	margin-left: 70%;
 	color: #FFF;
 }
 
 .pic2{
-	margin-top: 150px;
+	margin-top: 8%;
 }
 
 .profineclk{
-	margin-top: 7%;
-	margin-right: 3%;
+	margin-top: 8%;
+	margin-right: 5%;
 }
 
 .Edityourinfomation{
@@ -208,23 +208,23 @@ body {
 }
 .cycle1{
 	float: left;
-	margin-top:17%;
+	margin-top:250px;
 	margin-left: 20px;
 }
 .cycle2{
 	float: left;
-	margin-top:11%;
+	margin-top:170px;
 	margin-left: 20px;
 }
 .cycle3{
 	float: left;
-	margin-top:6%;
+	margin-top:50px;
 	margin-left: 20px;
 	z-index: 1;
 }
 .incycle{
 	float: left;
-	margin-top:7.3%;
+	margin-top:70px;
 	margin-left: -270px;
 	z-index: 2;
 	font-size: 34px;
