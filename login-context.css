@@ -148,6 +148,15 @@ body {
 .centercolumnlink{
 	color: #FFF;
 }
+
+.centercolumnlink:hover , .centercolumnlink:active{
+	color: #40494e;
+}
+
+.cheak{
+	
+}
+
 /*TEACHER*/
 /*
 .SI{
