@@ -180,6 +180,16 @@ body {
 	margin-left: 5%;
 }
 
+.en2{
+	margin-top: 5%;
+	margin-left: 5%;
+}
+
+.activity-clk{
+	margin-top: 3%;
+	margin-right: 5%;
+}
+
 .centercolumn{
 	color: #FFF;
 }
@@ -193,6 +203,13 @@ body {
 	font-size: 30px;
 	color: #FFF;
 	margin-top: -37%;
+	margin-left: 35%;
+}
+
+.name-of-activity2{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: -22.5%;
 	margin-left: 35%;
 }
 
