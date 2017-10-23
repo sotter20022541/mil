@@ -1,0 +1,63 @@
+.pic2{
+	margin-top: 8%;
+}
+
+.profineclk{
+	margin-top: 8%;
+	margin-right: 5%;
+}
+.profile{
+	color: #FFF;
+}
+.in2 {
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius:20px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+	background-color: #e8e8e8;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+
+.in2:hover , .in2:active{
+	background-color: #c1c1c1;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+.nationality{
+	margin-top: -18%;
+	margin-left: 15%;
+}
+
+.congenital-disease{
+
+	margin-top: 12%;
+	margin-left: 15%;
+}
+
+.data-contact{
+	margin-top: 8%;
+	margin-left: 15%;
+}
+
+.name{
+	margin-top: -24%;
+	margin-left: 70%;
+}
+
+.date-of-birth{
+	margin-top: 5%;
+	margin-left: 70%;
+}
+
+.birtholace{
+	margin-top: 6%;
+	margin-left: 70%;
+}
+
+.contact{
+	margin-top: 8%;
+	margin-left: 60%;
+}
