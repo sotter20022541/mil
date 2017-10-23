@@ -3,10 +3,10 @@ body {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: 100% 100%;
-    background-attachment: fixed;
-    font-family: "Open Sans Condensed";
+  background-attachment: fixed;
+  font-family: "Open Sans Condensed";
 }
-/**/
+
 .in1 {
 	font-family: "Open Sans Condensed";
 	padding-left: 20px;
@@ -104,18 +104,44 @@ body {
 	margin-right: 20px;
 }
 
-.profileleft{
-
-	margin-top: -18%;
-	margin-left: 15%;
+.profile{
 	color: #FFF;
 }
 
-.profileright{
+.nationality{
+	margin-top: -18%;
+	margin-left: 15%;
+}
 
+.congenital-disease{
+
+	margin-top: 12%;
+	margin-left: 15%;
+}
+
+.data-contact{
+	margin-top: 8%;
+	margin-left: 15%;
+}
+
+.name{
 	margin-top: -24%;
 	margin-left: 70%;
-	color: #FFF;
+}
+
+.date-of-birth{
+	margin-top: 5%;
+	margin-left: 70%;
+}
+
+.birtholace{
+	margin-top: 6%;
+	margin-left: 70%;
+}
+
+.contact{
+	margin-top: 8%;
+	margin-left: 60%;
 }
 
 .pic2{
@@ -224,8 +250,8 @@ body {
 }
 .incycle{
 	float: left;
-	margin-top:5%;
-	margin-left: -18%;
+	margin-top:70px;
+	margin-left: -270px;
 	z-index: 2;
 	font-size: 34px;
 	color: #FFF;
