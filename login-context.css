@@ -3,8 +3,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	background-size: 100% 100%;
-    background-attachment: fixed;
-    font-family: "Open Sans Condensed";
+  background-attachment: fixed;
+  font-family: "Open Sans Condensed";
 }
 
 .in1 {
@@ -115,28 +115,33 @@ body {
 
 .congenital-disease{
 
+	margin-top: 12%;
+	margin-left: 15%;
+}
+
+.data-contact{
+	margin-top: 8%;
+	margin-left: 15%;
+}
+
+.name{
 	margin-top: -24%;
 	margin-left: 70%;
 }
 
-.data-contact{
-
-}
-
-.name{
-
-}
-
 .date-of-birth{
-
+	margin-top: 5%;
+	margin-left: 70%;
 }
 
 .birtholace{
-
+	margin-top: 6%;
+	margin-left: 70%;
 }
 
 .contact{
-	
+	margin-top: 8%;
+	margin-left: 60%;
 }
 
 .pic2{
