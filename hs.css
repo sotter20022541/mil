@@ -12,8 +12,13 @@ body {
 	padding-left: 20px;
 	border-radius:20px;
 	border: 5px;
+<<<<<<< HEAD
 	height: 30px; 
 	width: 350px; 
+=======
+	height: 30px;
+	width: 350px;
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 }
 
 .in2 {
@@ -21,7 +26,11 @@ body {
 	padding-left: 5px;
 	border-radius:20px;
 	border: 5px;
+<<<<<<< HEAD
 	height: 30px; 
+=======
+	height: 30px;
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 	width: 100px;
 	background-color: #e8e8e8;
 	color: #2e3940;
@@ -37,8 +46,13 @@ body {
 .in3 {
 	padding-left: 10px;
 	border: 5px;
+<<<<<<< HEAD
 	height: 20px; 
 	width: 350px; 
+=======
+	height: 20px;
+	width: 350px;
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 }
 
 .bar{
@@ -105,7 +119,11 @@ body {
 	background-color: #000014;
 	color: #FFF;
 	padding-left: 10px;
+<<<<<<< HEAD
 	height: 45px; 
+=======
+	height: 45px;
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 	width: 253px;
 }
 
@@ -123,28 +141,46 @@ body {
 	margin-left:250px;
 	cursor:pointer;
 	}
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 .SIA{
 	font: 25px Open Sans Condensed;
 	color:#FFF;
 	cursor:pointer;
 	}
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 .AG{
 	float:right;
 	margin-top:100px;
 	margin-right:300px;
 	cursor:pointer;
 	}
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 .AGO{
 	font: 25px Open Sans Condensed;
 	color:#FFF;
 	cursor:pointer;
 	}
+<<<<<<< HEAD
 	.pic {
 	float: left;
 	margin-left:300px; 
+=======
+.pic {
+	float: left;
+	margin-left:300px;
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 	margin-top:150px;
 }
 .NameId>p {
@@ -177,7 +213,11 @@ body {
 	z-index: 2;
 	font-size: 34px;
 	color: #FFF;
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
 .print{
 	float: left;
 	margin-top:500px;
@@ -203,4 +243,8 @@ body {
 	margin-top:50px;
 	margin-left: 0%;
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ded82dad3c33c55eab700e82a43fbff51ef7187d
