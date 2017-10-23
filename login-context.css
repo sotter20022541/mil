@@ -82,6 +82,11 @@ body {
 	color: #40494e;
 }
 
+.piclink:hover , .piclink:active{
+	background-color: #40494e;
+	color: #40494e;
+}
+
 .bar-in{
 	font-size: 25px;
 	color: #FFF;
@@ -154,7 +159,7 @@ body {
 }
 
 .cheak{
-	
+
 }
 
 /*TEACHER*/
