@@ -1,40 +1,7 @@
-<!--
-<!DOCTYPE html>
-
-<html>
-
-	<head>
-
-		<title>Menubar</title>
-
-		<link rel="stylesheet" type="text/css" href="menubar.css" />
-
-	</head>
-
-	<body>
-
-		<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-
-		<button onclick="myFunction()">Click me</button>
-
-		<p id="demo"></p>
-
-		<script>
-			function myFunction() {
-    		document.getElementById("demo").innerHTML = "Hello World";
-			}
-		</script>
-
-	</body>
-
-</html>
--->
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Login</title>
-		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login-context.css')}}" />
+		<title>ROV</title>
 		<script type="text/javascript">
 			var xmlHttp;
 			function createXMLHttpRequest(){
@@ -68,17 +35,9 @@
 		</script>
 	</head>
 	<body>
-		<div align="center">
-			<br><br><br><br><br>
-			<img src="static/fibo.png" width="15%" height="15%" >
-			<br><br>
-			<form action.# id="contact-form" action="{{ url_for('checkPerson')}}", method="POST">
-				<input id="text1" type = "text" placeholder = "USER ID" name = "id" class = "in1"/>
-				<br><br>
-				<input id="text1" type = "password" placeholder = "PASSWORD" name = "pass" class = "in1" />
-				<br><br><br><br>
-				<input type = "button" value = "LOGIN" class = "in2" onclick="startRequest();" />
-			</form>
-		</div>
+		<form action="#" >
+			<input type = "button" value = "LOGIN" onclick="startRequest();" />
+		</form>
+
 	</body>
 </html>
