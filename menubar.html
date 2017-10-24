@@ -1,4 +1,4 @@
-
+<!--
 <!DOCTYPE html>
 
 <html>
@@ -9,38 +9,76 @@
 
 		<link rel="stylesheet" type="text/css" href="menubar.css" />
 
-		<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"-->
-
 	</head>
 
 	<body>
 
-		<div class="bar">
+		<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
 
-			<div class="bar-in">
+		<button onclick="myFunction()">Click me</button>
 
-				<div class="L">
+		<p id="demo"></p>
 
-					<a href="HomeStudent.html" class="piclink"><img src="back_icon.jpg" width="25"></a>&nbsp;&nbsp;&nbsp;
-					<a href="profile.html" class="link">PROFILE</a>&nbsp;&nbsp;&nbsp;
-					<a href="AcademicStudent.html" class="link">ACADEMIC</a>&nbsp;&nbsp;&nbsp;
-					<a href="student.html" class="link">WORK&EXPERIENCE</a>
-
-				</div>
-
-				<div class="R">
-
-					USERNAME&nbsp;&nbsp;&nbsp;
-					<a href="Homestudent.html" class="piclink"><image src="home_icon.jpg"></a>&nbsp;&nbsp;&nbsp;
-					<a href="student.html" class="piclink"><image src="print_icon.jpg"></a>&nbsp;&nbsp;&nbsp;
-					<a href="student.html" class="piclink"><image src="logout_icon.jpg"></a>
-
-				</div>
-
-			</div>
-
-		</div>
+		<script>
+			function myFunction() {
+    		document.getElementById("demo").innerHTML = "Hello World";
+			}
+		</script>
 
 	</body>
 
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Login</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='login-context.css')}}" />
+		<script type="text/javascript">
+			var xmlHttp;
+			function createXMLHttpRequest(){
+				if (window.ActiveXObject){
+					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+				}
+				else if (window.createXMLHttpRequest){
+					xmlHttp = new XMLHttpRequest();
+				}
+
+
+			}
+			function startRequest(){
+
+			createXMLHttpRequest();
+				xmlHttp.onreadystatechange = handleStateChange;
+				xmlHttp.Open("GET","response.py",true);
+				xmlHttp.send(null);
+			}
+			function handleStateChange(){
+				if(xmlHttp.readyState==4){
+
+					if(xmlHttp.status==200){
+
+						alert("reactive form Server:"+ xmlHttp.responseText);
+					}
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<div align="center">
+			<br><br><br><br><br>
+			<img src="static/fibo.png" width="15%" height="15%" >
+			<br><br>
+			<form id="contact-form" action="{{ url_for('checkPerson')}}", method="POST">
+				<input id="text1" type = "text" placeholder = "USER ID" name = "id" class = "in1"/>
+				<br><br>
+				<input id="text1" type = "password" placeholder = "PASSWORD" name = "pass" class = "in1" />
+				<br><br><br><br>
+				<input type = "buttom" value = "LOGIN" class = "in2" onclick="startRequest();" />
+			</form>
+		</div>
+	</body>
 </html>
