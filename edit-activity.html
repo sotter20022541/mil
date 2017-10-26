@@ -7,8 +7,8 @@
 
 		<title>Edit Activity</title>
 
-		<link rel="stylesheet" type="text/css" href="edit-activity.css" />
-		<link rel="stylesheet" type="text/css" href="background.css" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
 
 		<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"-->
 
@@ -16,14 +16,14 @@
 
 	<body>
 
+		<form id="contact-form" action="/menubar", method="POST">
 		<div class="bar">
 
 			<div class="bar-in">
 
 				<div class="L">
 
-					<form id="contact-form" action="/menubarL", method="POST">
-					<input type="image" name="click" src="back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="image" name="click" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
@@ -34,15 +34,16 @@
 				<div class="R">
 
 					USERNAME&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="home" src="home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="picPrinter" src="print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="logout" src="logout_icon.jpg" width="8.5%">
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
 
 				</div>
 
 			</div>
 
 		</div>
+	  </form>
 
 		<div align="left" class="dataEditactivity"><br>
 
@@ -51,22 +52,22 @@
 			DATE/DURATION :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" style="width:35%;height:25px;"/><br><br>
 			PHOTO OF ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;"/><br><br>
 			ADVISOR :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" style="width:44%;height:25px;"/><br><br>
-			A DESCRIPTION THE ACTIVITY :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "click" style="width:58.5%;height:300px;"/><br><br>
+			A DESCRIPTION THE ACTIVITY :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "click" style="width:58.5%;height:25px;"/><br><br>
 			FLIES OR DOCUMENTS RELEVANT TO THE ACTIVITY :&nbsp;&nbsp;<br><input id="text1" type = "text" name = "click" placeholder="SELECT FROM YOUR COMPUTER" style="width:58.5%;height:30px;"/>
 
 		</div>
 		<div class="browse1">
-   			<input name="click" type="file" value="home" src="browse.png" width="20%" >
+   			<input name="click" type="file">
 		</div>
 		<div class="browse2">
-   			<input name="click" type="file" value="home" src="browse.png" width="20%" >
+   			<input name="click" type="file">
 		</div>
 		<div align="right" class="save">
 
-			<input name="click" type="image" value="home" src="save.png" width="20%" >
+			<input type = "submit" value = "LOGIN" class = "in2" />
 
 		</div>
-		
+
 
 	</body>
 
