@@ -35,3 +35,9 @@
 	color: #2e3940;
 	box-shadow: -4px 5px #3c3e3d;
 }
+.in2:hover , .in2:active{
+	background-color: #c1c1c1;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+
