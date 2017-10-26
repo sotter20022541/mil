@@ -45,13 +45,13 @@
 }
 .pic {
 	float: left;
-	margin-left:300px;
-	margin-top:150px;
+	margin-left:15%;
+	margin-top:10%;
 }
 .NameId>p {
 	float: left;
-	margin-top:540px;
-	margin-left: -280px;
+	margin-top:35%;
+	margin-left: -25%;
 	color: #FFF;
 	font-size: 20px;
 }
