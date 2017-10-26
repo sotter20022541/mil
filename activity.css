@@ -16,14 +16,14 @@
 	box-shadow: -4px 5px #3c3e3d;
 }
 
-.left-volum{
+.left-colum{
 	position: absolute;
 	top: 10%;
 	left: 8%;
 	width: 10%;
 }
 
-.center-volum{
+.center-colum{
 	margin-left: 5%;
 }
 
@@ -35,11 +35,6 @@
 .activity-clk{
 	margin-top: 3%;
 	margin-right: 5%;
-}
-
-.en1{
-	margin-top: 1%;
-	margin-left: -40%;
 }
 
 .name-of-activity{
