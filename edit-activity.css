@@ -20,3 +20,18 @@
 	margin-top:40%;
 	margin-left: 10%;
 }
+.activity{
+	margin-top: -28%;
+	margin-left: 25%;
+}
+.in2 {
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius:20px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+	background-color: #e8e8e8;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
