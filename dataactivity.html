@@ -4,9 +4,10 @@
 
 	<head>
 
-		<title>Data Activity</title>
+		<title>DataActivity</title>
 
-		<link rel="stylesheet" type="text/css" href="login-context.css" />
+		<link rel="stylesheet" type="text/css" href="dataactivity.css" />
+		<link rel="stylesheet" type="text/css" href="background.css" />
 
 		<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"-->
 
@@ -20,19 +21,21 @@
 
 				<div class="L">
 
-					<a href="student.html"><img src="back_icon.jpg" width="25"></a>&nbsp;&nbsp;&nbsp;
-					<a href="profile.html" class="link">PROFILE</a>&nbsp;&nbsp;&nbsp;
-					<a href="AcademicStudent.html" class="link">ACADEMIC</a>&nbsp;&nbsp;&nbsp;
-					<a href="Activity.html" class="link">WORK&EXPERIENCE</a>
+					<form id="contact-form" action="/menubarL", method="POST">
+					<input type="image" name="click" src="back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+					</form>
 
 				</div>
 
 				<div class="R">
 
 					USERNAME&nbsp;&nbsp;&nbsp;
-					<a href="Homestudent.html"><image src="home_icon.jpg"></a>&nbsp;&nbsp;&nbsp;
-					<a href="student.html"><image src="print_icon.jpg"></a>&nbsp;&nbsp;&nbsp;
-					<a href="student.html"><image src="logout_icon.jpg"></a>
+					<input name="click" type="image" value="home" src="home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="picPrinter" src="print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout" src="logout_icon.jpg" width="8.5%">
 
 				</div>
 
@@ -40,28 +43,20 @@
 
 		</div>
 
-		<div align="left" class="leftcolumn">
+			<image src="en1.png" width="30%" class="en1">
+			<image src="activity.png" width="75%" class="activity-picture">
+			<div class="name-of-activity">NAME OF ACTIVITY</div>
+			<div class="advisor">ADVISOR :<input id="chkad" type="checkbox" value="ad" class="cheak"></div>
+			<div class="type">TYPE :</div>
+			<div class="description">DESCRIPTION :</div>
+			<div class="flies">FILE OR DOCUMENT RELEVANT TO THE ACTIVITY :</div>
 
-			<image src="en1.png" width="100%" class="pictureactivity">
 
-		</div>
+		<div align="right" class="dataactivity-clk">
 
-		<div class="centercolumn">
-
-			NAME OF ACTIVITY<br>
-			ADVISOR :<br>
-			DATE/DURATION<br>
-			TYPE :<br>
-			DESCRIPTION :<br>
-			FLIE OR DOCUMENT RELEVANT TO THE ACTIVITY :
-		</div>
-
-		<div align="right" class="Edit">
-
-			<br><br><input type = "submit" value = "EDIT" class = "in2" style=" margin-top:28%; margin-right: 8%;"></a>
+			<input type = "submit" value = "ADD" class = "in2" >
 
 		</div>
-
 
 	</body>
 
