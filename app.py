@@ -60,7 +60,7 @@ def checkPerson():
 	#print(countID)
 	#print(countPass)
 	if countID > 1 and countPass == 1:
-		return render_template('homeStudent.html', id_user = getID)
+		return render_template('HomeStudent.html', id_user = getID)
 	elif countID == 2 and countPass == 0:
 		print('your password is incorrect')
 	else:
