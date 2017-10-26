@@ -1,0 +1,78 @@
+.in2 {
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius:20px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+	background-color: #e8e8e8;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+
+.in2:hover , .in2:active{
+	background-color: #c1c1c1;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+
+.activity-picture{
+	margin-top: -28%;
+	margin-left: 25%;
+}
+
+.activity-clk{
+	margin-top: 3%;
+	margin-right: 5%;
+}
+
+.en1{
+	margin-top: 1%;
+	margin-left: -40%;
+}
+
+.name-of-activity{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: -37%;
+	margin-left: 35%;
+}
+
+.advisor{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 35%;
+}
+
+.date-duration{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 35%;
+}
+
+.more-info{
+	font-size: 25px;
+	color: #FFF;
+	margin-top: 2%;
+	margin-left: 35%;
+}
+
+.more-info-link{
+	color: #FFF;
+  border-radius:20px;
+	border: 5px;
+  background-color:hsla(290,100%,100%,0);
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.more-info-link:hover , .more-info-link:active{
+	color: #40494e;
+}
+
+.cheak{
+  height: 22px;
+	width: 22px;
+}
