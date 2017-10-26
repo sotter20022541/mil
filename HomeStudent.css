@@ -57,24 +57,24 @@
 }
 .cycle1{
 	float: left;
-	margin-top:250px;
-	margin-left: 20px;
+	margin-top:-25%;
+	margin-left: 40%;
 }
 .cycle2{
 	float: left;
-	margin-top:170px;
-	margin-left: 20px;
+	margin-top:-30%;
+	margin-left: 45%;
 }
 .cycle3{
 	float: left;
-	margin-top:50px;
-	margin-left: 20px;
+	margin-top:-35%;
+	margin-left: 53%;
 	z-index: 1;
 }
 .incycle{
 	float: left;
-	margin-top:100px;
-	margin-left: -430px;
+	margin-top:-35%;
+	margin-left: 58%;
 	z-index: 2;
 	font-size: 34px;
 	color: #FFF;
