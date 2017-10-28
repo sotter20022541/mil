@@ -22,19 +22,46 @@
 }
 
 .barPrint{
-	*margin = 0;padding=0%;
-	float: left;
-	margin : -8px;
-	margin-top:2%;
-	height:60px;
-	width:150px;
-	background-color:#000014;
+  margin-top: 2%;
+  margin-left: -0.6%;
+	font-size: 30px;
+	background-color: #000014;
+	color: #FFF;
+	padding-left: 13px;
+  padding-top: 5px;
+	height: 40px;
+	width: 100px;
 }
 
-.barPrint-in{
-	font-family: "Open Sans Condensed";
-	margin-top:4%;
-	margin-left:15%;
-	font-size: 40px;
+.font-FFF{
 	color: #FFF;
+}
+
+.profile{
+  margin-top: 1%;
+  margin-left: 20%;
+  font-size: 30px;
+}
+
+.pic-student{
+  margin-top: 1%;
+  margin-left: 15.5%;
+}
+
+.name{
+  margin-top: -18%;
+  margin-left: 35%;
+  font-size: 20px;
+}
+
+.date-of-birth{
+  margin-top: 1%;
+  margin-left: 35%;
+  font-size: 20px;
+}
+
+.nationality{
+  margin-top: -2%;
+  margin-left: 60%;
+  font-size: 20px;
 }
