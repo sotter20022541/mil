@@ -8,17 +8,23 @@ body {
 }
 
 .bar{
-	margin: -8px;
+	margin-top: -0.6%;
+	margin-left: -0.6%;
 	height: 50px;
+	width: 101.2%;
 	background-color:#000014;
 }
 
+.bar-in{
+	font-size: 22px;
+	color: #FFF;
+}
+
 .link{
-	margin-top: -5%;
+
 	font-size: 22px;
 	background-color: #000014;
 	color: #FFF;
-
 	border-radius:20px;
 	border: 5px;
 }
@@ -28,19 +34,14 @@ body {
 	color: #40494e;
 }
 
-.bar-in{
-	font-size: 25px;
-	color: #FFF;
-}
-
 .L{
 	float: left;
-	margin-top:12.5px;
-	margin-left:20px;
+	margin-top: 0.9%;
+	margin-left: 2%;
 }
 
 .R{
 	float: right;
-	margin-top:12.5px;
-	margin-right: 20px;
+	margin-top: 1.1%;
+	margin-right: 2%;
 }
