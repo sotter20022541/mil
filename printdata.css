@@ -65,3 +65,30 @@
   margin-left: 60%;
   font-size: 20px;
 }
+
+.x{
+  margin-top: 1%;
+  margin-left: 35%;
+  font-size: 20px;
+  height: 100px;
+	width: 600px;
+	background-color: #000014;
+}
+
+.gpax{
+  margin-top: 1%;
+  margin-left: 35%;
+  font-size: 20px;
+}
+
+.graduated{
+  margin-top: -2%;
+  margin-left: 60%;
+  font-size: 20px;
+}
+
+.work{
+  margin-top: 5%;
+  margin-left: 20%;
+  font-size: 30px;
+}
