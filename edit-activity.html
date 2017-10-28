@@ -7,8 +7,8 @@
 
 		<title>Edit Activity</title>
 
-		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
-		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="edit-activity.css" />
+		<link rel="stylesheet" type="text/css" href="background.css" />
 
 		<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"-->
 
@@ -23,7 +23,7 @@
 
 				<div class="L">
 
-					<input type="image" name="click" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="image" name="click" src="back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
 					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
@@ -34,9 +34,9 @@
 				<div class="R">
 
 					USERNAME&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+					<input name="click" type="image" value="home_icon" src="home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout_icon" src="logout_icon.jpg" width="9.5%">
 
 				</div>
 
@@ -56,17 +56,35 @@
 			FLIES OR DOCUMENTS RELEVANT TO THE ACTIVITY :&nbsp;&nbsp;<br><input id="text1" type = "text" name = "click" placeholder="SELECT FROM YOUR COMPUTER" style="width:58.5%;height:30px;"/>
 
 		</div>
-		<div class="browse1">
-   			<input name="click" type="file">
-		</div>
 		<div class="browse2">
-   			<input name="click" type="file">
+   			<input name="click" type="file" style="margin-top:63%;margin-left: 5%;width:40%;
+	height:25px;">
+		<div class="browse1">
+   			<input name="click" type="file" style="margin-top:72%;margin-left: 5%;width:40%;
+	height:25px;" >
+		</div>
+		
 		</div>
 		<div align="right" class="save">
 
-			<input type = "submit" value = "LOGIN" class = "in2" />
-
+			<input type = "submit" value = "SAVE" class = "in2" onclick="myFunction()"  />
+			<p name ="demo"></p>
 		</div>
+		
+
+		<script>
+		function myFunction() {
+   		 var x;
+    		if (confirm("Do you want to leave without finishing ?") == true) {
+        		x = "You pressed OK!";
+    		} else {
+        		x = "You pressed Cancel!";
+   		 }
+   		 document.getElementById("demo").innerHTML = x;
+}
+</script>
+}
+</script>
 
 
 	</body>
