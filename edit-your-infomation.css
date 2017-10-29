@@ -75,7 +75,7 @@
 }
 
 .clk{
-	float: right;
-	margin-top:7%;
-	margin-right: 2%;
+	position: fixed;
+	margin-top: 6.35%;
+	margin-left: 88%;
 }
