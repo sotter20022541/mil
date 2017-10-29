@@ -4,73 +4,135 @@
 	color: #FFF;
 	border-radius:20px;
 	border: 5px;
+	float: left;
+	margin-top: -35%;
+	margin-left: 64.5%;
+	z-index: 2;
 	font-size: 34px;
+	color: #FFF;
 }
+
 .link1:hover , .link1:active{
 	background-color: #ff5345;
 	color: #ae342a;
-	border-radius:20px;
-	border: 5px;
-	font-size: 34px;
 }
+
 .link2{
 	text-decoration: none;
 	color: #FFF;
 	background-color: #ff7e16;
 	border-radius:20px;
 	border: 5px;
+	float: left;
+	margin-top: -21.5%;
+	margin-left: 63.5%;
+	z-index: 2;
 	font-size: 34px;
+	color: #FFF;
 }
+
 .link2:hover , .link2:active{
 	background-color: #ff7e16;
 	color: #b04a11;
-	border-radius:20px;
-	border: 5px;
-	font-size: 34px;
 }
+
 .link3{
 	text-decoration: none;
 	color: #FFF;
 	background-color: #ffca26;
 	border-radius:20px;
 	border: 5px;
+	float: left;
+	margin-top: -8%;
+	margin-left: 57.35%;
+	z-index: 2;
 	font-size: 34px;
+	color: #FFF;
 }
+
 .link3:hover , .link3:active{
 	background-color: #ffca26;
 	color: #9c790f;
-	border-radius:20px;
-	border: 5px;
-	font-size: 34px;
+
 }
-.pic {
+.pic{
 	float: left;
 	margin-left:15%;
-	margin-top:10%;
+	margin-top:8%;
 }
-.NameId>p {
+.Name{
 	float: left;
-	margin-top:35%;
-	margin-left: -25%;
+	margin-top:34%;
+	margin-left: -20%;
 	color: #FFF;
 	font-size: 20px;
 }
-.cycle1{
+
+.id{
 	float: left;
-	margin-top:-25%;
-	margin-left: 40%;
+	margin-top:36%;
+	margin-left: -20%;
+	color: #FFF;
+	font-size: 20px;
 }
-.cycle2{
+
+.cycle11{
 	float: left;
-	margin-top:-30%;
-	margin-left: 45%;
+	margin-top: 15%;
+	margin-left: 5%;
 }
-.cycle3{
+
+.cycle12{
 	float: left;
-	margin-top:-35%;
-	margin-left: 53%;
+	margin-top: 21%;
+	margin-left: -3.8%;
+}
+
+.cycle13{
+	float: left;
+	margin-top: 27%;
+	margin-left: -3.8%;
+}
+
+.cycle21{
+	float: left;
+	margin-top: 10%;
+	margin-left: 4%;
+}
+
+.cycle22{
+	float: left;
+	margin-top: 19.8%;
+	margin-left: -7.5%;
+}
+
+.cycle23{
+	float: left;
+	margin-top: 29.6%;
+	margin-left: -7.5%;
+}
+
+.cycle31{
+	float: left;
+	margin-top: 2%;
+	margin-left: 4%;
 	z-index: 1;
 }
+
+.cycle32{
+	float: left;
+	margin-top: 0%;
+	margin-left: 4%;
+	z-index: 1;
+}
+
+.cycle33{
+	float: left;
+	margin-top: 0%;
+	margin-left: -1%;
+	z-index: 1;
+}
+
 .incycle{
 	float: left;
 	margin-top:-36%;
@@ -83,6 +145,6 @@
 .print{
 	background: url(I4_icon.png);
 	float: left;
-	margin-top:-10%;
+	margin-top: -6%;
 	margin-left: 85%;
 }
