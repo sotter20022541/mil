@@ -68,23 +68,23 @@
 		<div align="right" class="save">
 
 			<input type = "submit" value = "SAVE" class = "in2" onclick="myFunction()"  />
-			<p name ="demo"></p>
+			<input type = "hidden" name ="demo">
 		</div>
 		
 
 		<script>
+
 		function myFunction() {
    		 var x;
-    		if (confirm("Do you want to leave without finishing ?") == true) {
-        		x = "You pressed OK!";
+    		if (confirm("Do you want to Save ?") == true) {
+        		x = "save";
     		} else {
-        		x = "You pressed Cancel!";
+        		x = "cancle";
    		 }
    		 document.getElementById("demo").innerHTML = x;
 }
 </script>
-}
-</script>
+
 
 
 	</body>
