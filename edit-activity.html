@@ -86,6 +86,22 @@
 </script>
 
 
+		<input type="submit"  value = "SAVE" onclick="myFunction2()" />
+		<input type="hidden" name ="p" />
+		
+		<script>
+     	
+     	function myFunction2() {
+   		 var txt ;
+   		 	if (confirm("Do you want to Save ?") == true) {
+        		txt = "save";}
+        	else {
+        		txt = "cancle";}
+   		}
+   		document.getElementById("p").name = "txt";
+     	document.getElementById("p").innerHTML = txt;
+		</script>
+
 
 	</body>
 
