@@ -58,17 +58,17 @@
 		</div>
 		<div class="browse2">
    			<input name="click" type="file" style="margin-top:63%;margin-left: 5%;width:40%;
-	height:25px;">
+	height:25px;" />
 		<div class="browse1">
    			<input name="click" type="file" style="margin-top:72%;margin-left: 5%;width:40%;
-	height:25px;" >
+	height:25px;" />
 		</div>
 		
 		</div>
 		<div align="right" class="save">
 
 			<input type = "submit" value = "SAVE" class = "in2" onclick="myFunction()"  />
-			<input type = "hidden" name ="demo">
+			<input type = "hidden" name ="demo" />
 		</div>
 		
 
@@ -85,6 +85,22 @@
 }
 </script>
 
+
+		<input type="submit"  value = "SAVE" onclick="myFunction2()" />
+		<input type="hidden" name ="p" />
+		
+		<script>
+     	
+     	function myFunction2() {
+   		 var txt ;
+   		 	if (confirm("Do you want to Save ?") == true) {
+        		txt = "save";}
+        	else {
+        		txt = "cancle";}
+   		}
+   		document.getElementById("p").name = "txt";
+     	document.getElementById("p").innerHTML = txt;
+		</script>
 
 
 	</body>
