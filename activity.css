@@ -29,7 +29,7 @@
 .name-of-activity{
 	font-size: 30px;
 	color: #FFF;
-	margin-top: -36%;
+	margin-top: -22%;
 	margin-left: 35%;
 }
 
@@ -75,4 +75,9 @@
 	position: fixed;
 	margin-top: 21.45%;
 	margin-left: 88%;
+}
+
+.group{
+	margin-top: 1%;
+	margin-left: 1%;
 }
