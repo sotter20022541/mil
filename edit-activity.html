@@ -86,22 +86,15 @@
 </script>
 
 
-		<input type="submit"  value = "SAVE" onclick="myFunction2()" />
-		<input type="hidden" name ="p" />
 		
-		<script>
-     	
-     	function myFunction2() {
-   		 var txt ;
-   		 	if (confirm("Do you want to Save ?") == true) {
-        		txt = "save";}
-        	else {
-        		txt = "cancle";}
-   		}
-   		document.getElementById("p").name = "txt";
-     	document.getElementById("p").innerHTML = txt;
-		</script>
-
+	<form id="frm1" method="post" enctype="application/x-www-form-urlencoded">
+		<input id="p_value" type="button" name="p_value" size="10" /><br>
+		<a onclick="window.open('popup.html','tester','width=320,height=150');" href="javascript:void(0);">PopUp</a>
+		</form>
+<form id="frmChild" method="post" enctype="application/x-www-form-urlencoded">
+<br>ใส่ค่าที่ต้องการส่ง<br><input id="c_value" type="text" name="c_value" />
+<br><input id="click" onclick="pass_value()" type="button" name="click" value="Submit" />
+</form>
 
 	</body>
 
