@@ -67,35 +67,19 @@
 		</div>
 		<div align="right" class="save">
 
-			<input type = "submit" value = "SAVE" class = "in2" onclick="myFunction()"  />
-			<input type = "hidden" name ="demo" />
+			<input type = "submit" value = "SAVE" class = "in2" onclick="zz();"  />
+
 		</div>
 		
-
 		<script>
+		    var Popup2;
+		    function zz(){
+		        var decor = "width=400 , height=350 ";
+		        popup2 = window.open('ss.html', '_self', decor);
+   				 }
 
-		function myFunction() {
-   		 var x;
-    		if (confirm("Do you want to Save ?") == true) {
-        		x = "save";
-    		} else {
-        		x = "cancle";
-   		 }
-   		 document.getElementById("demo").innerHTML = x;
-}
-</script>
+		</script>
 
-
-		
-	<form id="frm1" method="post" enctype="application/x-www-form-urlencoded">
-		<input id="p_value" type="button" name="p_value" size="10" /><br>
-		<a onclick="window.open('popup.html','tester','width=320,height=150');" href="javascript:void(0);">PopUp</a>
-		</form>
-<form id="frmChild" method="post" enctype="application/x-www-form-urlencoded">
-<br>ใส่ค่าที่ต้องการส่ง<br><input id="c_value" type="text" name="c_value" />
-<br><input id="click" onclick="pass_value()" type="button" name="click" value="Submit" />
-</form>
-
-	</body>
+  </body>
 
 </html>

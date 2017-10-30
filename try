@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Popup</title>
+
+
+
+
+
+	</head>
+	<body>
+		
+<script>
+    var Popup2;
+    function zz(){
+        var decor = "width=400 , height=350";
+        popup2 = window.open('ss.html', '_self', decor);
+    }
+
+</script>
+    <form>
+        
+        <input  type="button" value = "pop up" onclick="zz();" />
+
+    </form>
+
+
+	</body>
+</html>
