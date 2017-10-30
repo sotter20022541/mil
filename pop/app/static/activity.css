@@ -16,12 +16,6 @@
 	box-shadow: -4px 5px #3c3e3d;
 }
 
-.dataactivity-clk{
-	position: fixed;
-	margin-top: 18.7%;
-	margin-left: 88%;
-}
-
 .en1{
 	margin-top: 2%;
 	margin-left: 4%;
@@ -30,7 +24,7 @@
 .name-of-activity{
 	font-size: 30px;
 	color: #FFF;
-	margin-top: -36%;
+	margin-top: -22%;
 	margin-left: 35%;
 }
 
@@ -41,28 +35,43 @@
 	margin-left: 35%;
 }
 
-.type{
+.date-duration{
 	font-size: 30px;
 	color: #FFF;
 	margin-top: 1%;
 	margin-left: 35%;
 }
 
-.description{
-	font-size: 30px;
+.more-info{
+	font-size: 25px;
 	color: #FFF;
-	margin-top: 1%;
+	margin-top: 2%;
 	margin-left: 35%;
 }
 
-.flies{
-	font-size: 30px;
+.more-info-link{
 	color: #FFF;
-	margin-top: 1%;
-	margin-left: 35%;
+	border: 5px;
+  background-color:hsla(290,100%,100%,0);
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+.more-info-link:hover , .more-info-link:active{
+	color: #40494e;
 }
 
 .cheak{
   height: 22px;
 	width: 22px;
+}
+
+.activity-clk{
+	position: fixed;
+	margin-top: 20%;
+	margin-left: 88%;
+}
+
+.group{
+
 }

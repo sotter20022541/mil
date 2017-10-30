@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Edit Activity</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+
+		<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"-->
+
+	</head>
+
+	<body>
+
+		<form id="contact-form" action="/menubar", method="POST">
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+	  </form>
+
+		<form id="contact-form" action="/getEditAc", method="POST">
+		<div align="left" class="dataEditactivity"><br>
+
+			NAME OF ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "text" name = "nameAc" style="width:31%;height:25px;"/><br><br>
+			TYPE :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:25px;"><br><br>
+			DATE/DURATION :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:25px;"/><br><br>
+			PHOTO OF ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "text" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;"/><br><br>
+			ADVISOR :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:25px;"/><br><br>
+			A DESCRIPTION THE ACTIVITY :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "des" style="width:58.5%;height:25px;"/><br><br>
+			FLIES OR DOCUMENTS RELEVANT TO THE ACTIVITY :&nbsp;&nbsp;<br><input id="text1" type = "file" name = "click" placeholder="SELECT FROM YOUR COMPUTER" style="width:58.5%;height:30px;"/>
+
+		</div>
+		</form>
+		<div class="browse2">
+   			<input name="click" type="file" style="margin-top:63%;margin-left: 5%;width:40%;
+	height:25px;">
+		<div class="browse1">
+   			<input name="click" type="file" style="margin-top:72%;margin-left: 5%;width:40%;
+	height:25px;" >
+		</div>
+
+		</div>
+		<div align="right" class="save">
+
+			<input type = "submit"  value = "SAVE" class = "in2" />
+
+		</div>
+		</form>
+
+	</body>
+
+</html>

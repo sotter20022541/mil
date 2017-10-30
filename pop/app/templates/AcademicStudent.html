@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Academic</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='AcademicStudent.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+
+	</head>
+
+	<body>
+
+		<form id="contact-form" action="/menubar", method="POST">
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+	</form>
+		<div class="Academic">
+
+			<p><u>ACADEMIC</u> : GRADE</p>
+
+		</div>
+		<div class="selectbar">
+					<form id="contact-form" action="/selectTerm", method="POST">
+						<select id="section"  name = "click" size="1" style="width:400px; font-size:25px;height:30px;color:#46445c; " >
+							<option value="1/2559">1/2559</option>
+							<option value="2/2559">2/2559</option>
+							<option value="1/2560">1/2560</option>
+							<option value="2/2560">2/2560</option>
+						</select>
+						<div class="in"><input type="submit" value="select" class="in2"></div>
+					</form>
+
+			</select>
+		</div>
+		<div class="table1">
+			<table border="3" style="width:95%; height:250px; color:#FFF; border-color:#000014;" >
+				<tr>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >ID SUBJECT</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">NAME SUBJECT</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">ACADEMIC RECORD</th>
+				</tr>
+				{%for academic in page %}
+				<tr>
+
+					<td align="center">{{academic.ID_Subject}}</td>
+					<td>&nbsp;&nbsp;&nbsp;{{academic.Name_Subject}}</td>
+					<td align="center">{{academic.Credit}}</td>
+					<td align="center">{{academic.Academic_Regcord}}</td>
+
+				</tr>
+				{% endfor %}
+				</div>
+
+		</table>
+		<div class="table2">
+			<table style="width:95%; height:140px; color:#FFF;border-color:#000014;" border="3" >
+				<tr>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">RESULT</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
+
+				</tr>
+				{%for academic2 in page2%}
+				<tr>
+					<td style=" border-color:#000014;font-size:20px;">&nbsp;&nbsp;&nbsp;THIS SEMESTER</td>
+					<td align="center">{{academic2.This_semester}}</td>
+					<td align="center">{{academic2.GPA}}</td>
+
+
+				</tr>
+				<tr>
+					<td style=" border-color:#000014;font-size:20px;">&nbsp;&nbsp;&nbsp;CUMULATIVE</td>
+					<td align="center">{{academic2.Cumulative_credit}}</td>
+					<td align="center">{{academic2.GPAX}}</td>
+				</tr>
+				{% endfor %}
+				</div>
+		</table>
+
+	</body>
+
+</html>

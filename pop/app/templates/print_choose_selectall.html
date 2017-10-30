@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Profile</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='print_choose.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+
+		<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"-->
+
+	</head>
+
+	<body>
+		<form id="contact-form" action="/menubar", method="POST">
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<input type="image" name="click" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+		</form>
+		<div class="barPrint">
+			PRINT
+		</div><!--barPrint-->
+
+		<div align="right" ><!--button-->
+
+      <form id="contact-form" action="/selectall", method="POST">
+			<input type = "submit" name="click" value = "UNSELECTALL" class = "button12" >
+			<input type = "submit" name="click" value = "SELECTALL" class = "button12" >
+			</form>
+
+		</div>
+
+		<form id="contact-form" action="/checkBox", method="POST">
+		<div>
+			<div class="alphabet-proflie">
+				PROFILE
+			</div>
+
+			<div class="alphabet-P">
+
+				NAME <label><div class="box"><input type="checkbox" name="NAME" checked></div><br></label>
+				DATE OF BIRTH<label><div class="box"><input type="checkbox" name="date of birth" checked></div><br></label>
+				BIRTHPLACE<label><div class="box"><input type="checkbox" name="birthplace" checked></div><br></label>
+				NATIONALITY<label><div class="box"><input type="checkbox" name="nationality" checked></div><br></label>
+				CONGENITAL DISEASE<label><div class="box"><input type="checkbox" name="congenital disease" checked></div><br></label>
+				CONTACT<label><div class="box"><input type="checkbox" name="contact" checked></div><br></label>
+				DATA CONTACT<label><div class="box"><input type="checkbox" name="data contact" checked></div><br></label>
+
+			</div>
+
+			<div class="alphabet-academic">
+				ACADEMIC
+			</div>
+
+			<div class="alphabet-A">
+				GPAX<div class="box2"><input type="checkbox" name="gpax" checked></div>
+			</div>
+
+			<div class="alphabet-work">
+				WORK&EXPERIENCE <br>
+			</div>
+			<div class="alphabet-W">
+				<!--flask+box3 <div class="box3"><input type="checkbox" name="work"></div> -->
+			</div>
+
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+		<div class="buttonCD">
+			<input type = "submit" name="click" value ="DONE" class="buttonDone" >
+
+		</div>
+
+	</body>
+	</form>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>HomeStudent</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='HomeStudent.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+	</head>
+
+	<body>
+		<script>
+		function goBack() {
+   		window.history.back();
+		}
+		</script>
+
+		<form id="contact-form" action="/menubar", method="POST">
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+				</div>
+
+				<div class="R">
+
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+		</form>
+
+		<image src="static/student.png" width="20%" class='pic'>
+
+		<div class='Name'>NAME : {{name}}</div>
+		<div class='id'>ID : {{id_user}}</div>
+
+		<image src="static/circle1.png" width = "50" height ="30" class="cycle11">
+		<image src="static/circle2.png" width = "50" height ="30" class="cycle12">
+		<image src="static/circle3.png" width = "50" height ="30" class="cycle13">
+
+		<image src="static/circle1.png" width = "100" height ="60" class="cycle21">
+		<image src="static/circle2.png" width = "100" height ="60" class="cycle22">
+		<image src="static/circle3.png" width = "100" height ="60" class="cycle23">
+
+		<image src="static/circle1.png" width = "300" height ="180" class="cycle31">
+		<image src="static/circle2.png" width = "300" height ="180" class="cycle32">
+		<image src="static/circle3.png" width = "450" height ="180" class="cycle33">
+
+		<form id="contact-form" action="/menubar", method="POST">
+		<input type="submit" name="click" value="PROFILE" class="link1">
+		<input type="submit" name="click" value="ACADEMIC" class="link2">
+		<input type="submit" name="click" value="WORK&EXPERIENCE""dddd" class="link3">
+		</form>
+		
+		</div>
+		<div class="print">
+			<form id="contact-form" action="/printer", method="POST">
+			<input name="click" type="image" value="picPrinter" src="static/I4_icon.png" width="200" height="120">
+			</form>
+
+		</div>
+
+	</body>
+
+</html>
