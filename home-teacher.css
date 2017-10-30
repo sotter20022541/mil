@@ -1,0 +1,26 @@
+/*TEACHER*/
+.Student_Information{
+	float:left;
+	margin-top:8%;
+	margin-left:17.5%;
+	cursor:pointer;
+	}
+
+.Student_Information_A{
+	font-size: 25px;
+	color:#FFF;
+	cursor:pointer;
+	}
+
+.Add_Grade{
+	float:right;
+	margin-top:8%;
+	margin-right:17.5%;
+	cursor:pointer;
+	}
+
+.Add_Grade_A{
+	font-size: 25px;
+	color:#FFF;
+	cursor:pointer;
+	}
