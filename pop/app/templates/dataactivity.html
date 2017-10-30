@@ -43,17 +43,19 @@
 
 		</div>
 	  </form>
-		{%for dataactivity in page %}
-			<image src="static/en1.png" width="30%" class="en1">
-			<image src="static/activity.png" width="75%" class="activity-picture">
-			<div class="name-of-activity">NAME OF ACTIVITY</div>
-			<div class="advisor">ADVISOR :<input id="chkad" type="checkbox" value="ad" class="cheak"></div>
-			<div class="type">TYPE :</div>
-			<div class="description">DESCRIPTION :</div>
-			<div class="flies">FILE OR DOCUMENT RELEVANT TO THE ACTIVITY :</div>
 
+		<div class="group">
 
-		<div align="right" class="dataactivity-clk">
+		<image src="static/en1.png" width="30%" class="en1">
+		<div class="name-of-activity">NAME OF ACTIVITY</div>
+		<div class="advisor">ADVISOR :<input id="chkad" type="checkbox" value="ad" class="cheak"></div>
+		<div class="type">TYPE :</div>
+		<div class="description">DESCRIPTION :</div>
+		<div class="flies">FILE OR DOCUMENT RELEVANT TO THE ACTIVITY :</div>
+
+		<div>
+
+		<div class="dataactivity-clk">
 
 			<form id="contact-form" action="/editAc", method="POST">
 			<input type = "submit" name= "click" value = "EDIT" class = "in2" >
@@ -61,7 +63,6 @@
 
 		</div>
 
-	{% endfor %}
 	</body>
 
 </html>
