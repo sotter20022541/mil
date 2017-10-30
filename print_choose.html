@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Profile</title>
+
+		<link rel="stylesheet" type="text/css" href="print_choose.css" />
+		<link rel="stylesheet" type="text/css" href="background.css" />
+
+		<!--<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed"-->
+
+	</head>
+
+	<body>
+
+		<form id="contact-form" action="/menubar", method="POST">
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<input type="image" name="click" value="back" src="back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					USERNAME&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="logout_icon" src="logout_icon.jpg" width="9.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+		</form>
+
+		<div class="barPrint">PRINT</div><!--barPrint-->
+
+		<div align="right" ><!--button-->
+
+			<form id="contact-form" action="/selectall", method="POST">
+			<input type = "submit" name="click" value = "UNSELECT ALL" class = "button12" >
+			<input type = "submit" name="click" value = "SELECTALL" class = "button12" >
+			</form>
+
+		</div>
+
+		<form id="contact-form" action="/checkBox", method="POST">
+
+		<div class="alphabet-proflie">PROFILE</div>
+
+		<div class="alphabet-P">
+
+				<label><div class="name">NAME</div><input type="checkbox" name="NAME" class="box11"></label>
+				<label><div class="date">DATE OF BIRTH</div><input type="checkbox" name="date of birth" class="box12"></label>
+				<label><div class="birth">BIRTHPLACE</div><input type="checkbox" name="birthplace" class="box13"></label>
+				<label><div class="nation">NATIONALITY</div><input type="checkbox" name="nationality" class="box14"></label>
+				<label><div class="congen">CONGENITAL DISEASE</div><input type="checkbox" name="congenital disease" class="box15"></label>
+				<label><div class="contact">CONTACT</div><input type="checkbox" name="contact" class="box16"></label>
+				<label><div class="data">DATA CONTACT</div><input type="checkbox" name="data contact" class="box17"></label>
+
+		</div>
+
+		<div class="alphabet-academic">ACADEMIC</div>
+
+		<div class="alphabet-A">
+
+			<label><div>GPAX</div><input type="checkbox" name="gpax" class="box2"></label>
+
+		</div>
+
+		<div class="alphabet-work">WORK&EXPERIENCE</div>
+
+		<div class="alphabet-W">
+
+			<label><div class="name">XXXXXXXXX</div><input type="checkbox" name="NAME" class="box3"></label>
+			<label><div class="name">XXXXXXXXX</div><input type="checkbox" name="NAME" class="box3"></label>
+			<label><div class="name">XXXXXXXXX</div><input type="checkbox" name="NAME" class="box3"></label>
+
+		</div>
+
+		<div class="buttonCD">
+
+			<input type = "submit" name="click" value ="DONE" class="buttonDone" ><br><br>
+
+		</div>
+
+	</body>
+
+	</form>
+
+</html>
