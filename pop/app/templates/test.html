@@ -1,0 +1,20 @@
+<!Doctype html>
+	<head>
+	<title>Student</title>
+</head>
+<body>
+	<div>
+		<p>
+			Test page!
+			{%for activity in activity %}
+				<br>{{activity.nameAc}}<br>
+				<br>{{activity.advisor}}<br>
+				<br>{{activity.date}}<br>
+				<br>{{activity.type}}<br>
+				<br>{{activity.des}}<br>
+				<br>{{activity.file}}<br>
+			{% endfor %}
+		</p>
+	<div>
+</body>
+</html>
