@@ -66,7 +66,7 @@
   font-size: 20px;
 }
 
-.x{
+.data{
   margin-top: 1%;
   margin-left: 35%;
   font-size: 20px;
@@ -91,4 +91,36 @@
   margin-top: 5%;
   margin-left: 20%;
   font-size: 30px;
+}
+
+.en1{
+	margin-top: 2%;
+	margin-left: 15.55%;
+}
+
+.name-of-activity{
+	font-size: 25px;
+	color: #FFF;
+	margin-top: -18%;
+	margin-left: 42%;
+}
+
+.advisor{
+	font-size: 25px;
+	color: #FFF;
+	margin-top: 2%;
+	margin-left: 42%;
+}
+
+.date-duration{
+	font-size: 25px;
+	color: #FFF;
+	margin-top: 2%;
+	margin-left: 42%;
+}
+
+.print-clk{
+	position: fixed;
+	margin-top: -18%;
+	margin-left: 88%;
 }
