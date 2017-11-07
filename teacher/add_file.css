@@ -1,0 +1,77 @@
+.bar_add{
+	margin-top: 4%;
+	margin-left: -0.6%;
+	height: 55px;
+	width: 96.2%;
+	background-color:#000014;
+	font-size: 35px;
+	color: #FFF;
+	padding-top:1%;
+	padding-left:5%;
+}
+
+.box_add{
+  margin-top: 4%;
+	margin-left: 25%;
+	height: 300px;
+	width: 50%;
+	background-color:#000014;
+  border-radius:20px;
+}
+
+.in2 {
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius:20px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+	background-color: #e8e8e8;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+
+.in2:hover , .in2:active{
+	background-color: #c1c1c1;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+
+.ok-clk{
+	margin-top: 5%;
+	margin-left: 88%;
+}
+
+.cancle-clk{
+	margin-top: -2.2%;
+	margin-left: 79%;
+}
+
+.file{
+  margin-top: -8%;
+	margin-left: 5%;
+}
+
+.filename{
+  color: #FFF;
+  margin-top: -7%;
+	margin-left: 20%;
+  font-size: 25px;
+  margin-bottom: 2%;
+}
+
+.selectbar{
+	margin-top:23%;
+	margin-left: 80%;
+}
+
+.in1 {
+	font-family: "Open Sans Condensed";
+	padding-left: 14px;
+	border-radius:10px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+  margin-top: 7%;
+  margin-left: 75%;
+}

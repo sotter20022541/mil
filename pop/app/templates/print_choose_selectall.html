@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>Profile</title>
+		<title>Print</title>
 
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='print_choose.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
@@ -42,9 +42,7 @@
 
 		</div>
 		</form>
-		<div class="barPrint">
-			PRINT
-		</div><!--barPrint-->
+		<div class="barPrint">PRINT</div><!--barPrint-->
 
 		<div align="right" ><!--button-->
 
@@ -56,40 +54,35 @@
 		</div>
 
 		<form id="contact-form" action="/checkBox", method="POST">
-		<div>
-			<div class="alphabet-proflie">
-				PROFILE
-			</div>
+
+			<div class="alphabet-proflie">PROFILE</div>
 
 			<div class="alphabet-P">
 
-				NAME <label><div class="box"><input type="checkbox" name="NAME" checked></div><br></label>
-				DATE OF BIRTH<label><div class="box"><input type="checkbox" name="date of birth" checked></div><br></label>
-				BIRTHPLACE<label><div class="box"><input type="checkbox" name="birthplace" checked></div><br></label>
-				NATIONALITY<label><div class="box"><input type="checkbox" name="nationality" checked></div><br></label>
-				CONGENITAL DISEASE<label><div class="box"><input type="checkbox" name="congenital disease" checked></div><br></label>
-				CONTACT<label><div class="box"><input type="checkbox" name="contact" checked></div><br></label>
-				DATA CONTACT<label><div class="box"><input type="checkbox" name="data contact" checked></div><br></label>
+				<label><div class="birth">BIRTHPLACE</div><input type="checkbox" name="birthplace" class="box13" checked></label>
+				<label><div class="congen">CONGENITAL DISEASE</div><input type="checkbox" name="congenital disease" class="box15" checked></label>
+				<label><div class="contact">CONTACT</div><input type="checkbox" name="contact" class="box16" checked></label>
+				<label><div class="data">DATA CONTACT</div><input type="checkbox" name="data contact" class="box17" checked></label>
 
 			</div>
 
-			<div class="alphabet-academic">
-				ACADEMIC
-			</div>
+			<div class="alphabet-academic">ACADEMIC</div>
 
 			<div class="alphabet-A">
-				GPAX<div class="box2"><input type="checkbox" name="gpax" checked></div>
+
+				<label><div>GPAX</div><input type="checkbox" name="gpax" class="box2" checked></label>
+
 			</div>
 
-			<div class="alphabet-work">
-				WORK&EXPERIENCE <br>
-			</div>
+			<div class="alphabet-work">WORK&EXPERIENCE</div>
+
 			<div class="alphabet-W">
-				<!--flask+box3 <div class="box3"><input type="checkbox" name="work"></div> -->
-			</div>
 
-		</div>
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				{%for activity in page %}
+				<label><div class="name">{{activity.Name_Activity}}</div><input type="checkbox" name="NAME" class="box3" checked></label>
+				{% endfor %}
+
+			</div>
 
 		<div class="buttonCD">
 			<input type = "submit" name="click" value ="DONE" class="buttonDone" >
