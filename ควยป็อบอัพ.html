@@ -1,151 +1,82 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Edit Activity</title>
+<link rel="stylesheet" type="text/css" href="edit-activity.css" />
+<link rel="stylesheet" type="text/css" href="background.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
 <style>
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-    width: 10%;
-    padding: 10px 16px;
-    background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-
-
-.container {
-	width: 10%;
-    padding: 10px 16px;
-   
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
+	
+	body {
+	background-image: url("backgound.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+  	background-attachment: fixed;
+ 	font-family: "Open Sans Condensed";
 }
 </style>
-<body>
+<div data-role="page"> 
+  <div class="bar">
+ <a href="#myPopup" data-rel="popup" class=" ui-btn-inline ui-corner-all ui-icon-check " ><img src="back_icon.jpg" style=""></a>
 
-<h2>Modal Login Form</h2>
+    <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+      <form method="post" action="/action_page_post.php">
+        <div>
+        
+          <h3>Are you sure to back ?</h3>
+         	<input type = "button" value="Yes" data-inline="true"  >
+          <input type="submit" data-inline="true" value="No">
+        </div>
+      </form>
+    </div>
+			<div class="bar-in">
 
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+				<div class="L " style="margin-top: -4.1%;">
+					
 
-<div id="id01" class="modal">
+					&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link" data-inline="true" >
+					<input type="submit" name="click" value="ACADEMIC" class="link" data-inline="true">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link" data-inline="true">
+					</form>
+
+				</div>
+
+				<div class="R" style="margin-top: -3%;" >
+
+					USERNAME&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="home_icon.jpg" width="9.5%" data-inline="true">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="print_icon.jpg" width="9.5%" data-inline="true">&nbsp;
+					<input name="click" type="image" value="logout_icon" src="logout_icon.jpg" width="9.5%" data-inline="true">
+
+				</div>
+
+			</div>
+
+		</div>
+
+  <div data-role="main" class="ui-content ">
   
-  <form class="modal-content animate" id="contact-form" action="/printer", method="POST">
-    
-  	<P>Do you want to save ?</P> </br>
-    <div class="container">
-      <input name ="save" type="submit" value = "SAVE" />
-    </div>
 
-    <div class="container2" style="background-color:#f1f1f1">
-      <input type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" value = "Cancel" />
-    </div>
-
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+			NAME OF ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" style="width:31%;height:25px;"/><br><br>
+			TYPE :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" style="width:49%;height:25px;"><br><br>
+			DATE/DURATION :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" style="width:35%;height:25px;"/><br><br>
+			PHOTO OF ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;"/><br><br>
+			ADVISOR :&nbsp;&nbsp;<input id="text1" type = "text" name = "click" style="width:44%;height:25px;"/><br><br>
+			A DESCRIPTION THE ACTIVITY :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "click" style="width:58.5%;height:25px;"/><br><br>
+			FLIES OR DOCUMENTS RELEVANT TO THE ACTIVITY :&nbsp;&nbsp;<br><input id="text1" type = "text" name = "click" placeholder="SELECT FROM YOUR COMPUTER" style="width:58.5%;height:30px;"/>
+			<input type="submit" data-inline="true" value="SAVE">
+  
+  </div>
+ 
+</div> 
 
 </body>
 </html>

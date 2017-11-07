@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="AcademicStudent.css" />
 
 		<link rel="stylesheet" type="text/css" href="background.css" />
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 
 
 
@@ -19,6 +20,7 @@
 	</head>
 
 	<body>
+				
 
 		<div class="bar">
 
@@ -40,13 +42,57 @@
 					USERNAME&nbsp;&nbsp;&nbsp;
 					<input name="click" type="image" value="home" src="home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
 					<input name="click" type="image" value="picPrinter" src="print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="logout" src="logout_icon.jpg" width="9.5%">
+					<input class = "out" name="click" type="image" value="logout" src="logout_icon.jpg" width="9.5%">
 
 				</div>
 
 			</div>
 
 		</div>
+		<div class="container">
+
+			<div class="popup">
+				<span id="close">&times;</span>
+				<p>Do you want to Exit ?</p>
+				<div class="option">
+					<form  action="/getPopup", method="POST">
+					<input class="a" type = "submit" name="cancel" value = "Cancel" />
+					<input  class ="b" type = "submit" name="Exit" value = "Exit" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+			
+		</div>
+		<script type="../js/jquery-3.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+				$(".popup").on('click',function(){
+					if($(event.target).is("#close")){
+						$(".cover").fadeOut('slow');
+						$(".popup").fadeOut('slow');
+					}
+				});
+				$('.cover').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+				$('.b').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
 		<div class="Academic">
 
 			<p><u>ACADEMIC</u> : GRADE</p>
@@ -139,6 +185,7 @@
 
 				</div>
 		</table>
+		
 	</body>
 
 </html>
