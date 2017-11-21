@@ -1,21 +1,14 @@
 .bar_add{
 	margin-top: 1%;
 	margin-left: -3%;
-	height:45px;
-	width: 16%;
-	background-color:#0f0f27;
-	font-size: 30px;
+	font-size: 25px;
 	color: #FFF;
-	padding-top:0.5%;
-	padding-left:3%;
-	border-radius: 0px;
-
 }
 
 .selectfile{
-	font-size:40px;
+	font-size:35px;
 	color:#FFF;
-	margin-top:7%;
+	margin-top:8%;
 	margin-left:-8%;
 }
 .buttonSelect{
@@ -54,7 +47,7 @@
 	color: #2e3940;
 	box-shadow: -0px 4px #3c3e3d;
 	margin-top: 2%;
-	margin-left: 60%;
+	margin-left: 75%;
 	font-size:20px;
 	position: fixed;
 	float: left;
@@ -72,11 +65,12 @@
 	font-family: "Open Sans Condensed";
 	border-radius: 5px;
 	border: 5px;
-	height: 150px;
-	width: 450px;
-	background-color: #0f0f27;
+	height: 240px;
+	width: 500px;
+	background-color: #000014;
 	color: #FFF;
 	margin-top: 4%;
+	font-size: 25px;
 
 }
 .file{
@@ -92,23 +86,23 @@
 	border: 5px;
 	height: 30px;
 	width: 110px;
-  margin-top: 6%
-    margin-left: 10%;
-	font-size: 15px;
+  margin-top: 6%;
+  margin-left: 12%;
+	font-size: 20px;
 }
 
 .term{
-	font-size: 22px;
-	margin-left: -48%;
-	margin-top: -7%;
+	font-size: 25px;
+	margin-left: -30%;
+	margin-top: -6%;
 }
 
 .add{
 	margin-top: 2%;
-	font-size: 30px;
+	font-size: 25px;
 }
-.block_add{
 
+.block_add{
 	margin-top: 7%;
 	margin-left: 13%;
 	height: 500PX ;
@@ -120,9 +114,26 @@
 	padding-left:5%;
 	border-radius: 20px;
 }
+
 .in4{
 	margin-top: -2%;
 }
-.in6{
-	margin-left: 14%;
+
+.data3{
+  float: left;
+  background-color: #000014;
+  height: 55px;
+	width: 1150px;
+  margin-left: 8.5%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+	border: 5px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.data-in{
+  margin-top: 1.2%;
+  margin-left: 5%;
+  margin-bottom: 0%;
 }
