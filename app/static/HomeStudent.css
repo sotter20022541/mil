@@ -5,7 +5,7 @@
 	border-radius:20px;
 	border: 5px;
 	float: left;
-	margin-top: -27.5%;
+	margin-top: -26%;
 	margin-left: 50%;
 	font-size: 34px;
 	width: 30%;
@@ -25,7 +25,7 @@
 	border-radius:20px;
 	border: 5px;
 	float: left;
-	margin-top: -17%;
+	margin-top: -16%;
 	margin-left: 50%;
 	z-index: 2;
 	font-size: 34px;
@@ -46,7 +46,7 @@
 	border-radius:20px;
 	border: 5px;
 	float: left;
-	margin-top: -6.5%;
+	margin-top: -6%;
 	margin-left: 50%;
 	z-index: 2;
 	font-size: 34px;
@@ -62,23 +62,23 @@
 }
 .pic{
 	float: left;
-	margin-left:22%;
-	margin-top:2%;
+	margin-left:25%;
+	margin-top:4%;
 	width: 220px;
 	height: 250px;
 }
 .Name{
 	float: left;
 	margin-top:25%;
-	margin-left: -20%;
+	margin-left: -13%;
 	color: #FFF;
 	font-size: 25px;
 }
 
 .id{
 	float: left;
-	margin-top:27%;
-	margin-left: -20%;
+	margin-top:28%;
+	margin-left: -13%;
 	color: #FFF;
 	font-size: 25px;
 }
