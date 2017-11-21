@@ -19,7 +19,7 @@
 
 .barPrint{
 	margin-top: 2%;
-	margin-left: -0.6%;
+	margin-left:4%;
 	font-size: 30px;
 	background-color: #000014;
 	color: #FFF;
@@ -165,15 +165,15 @@
 .box2{
 	float:left;
 	margin-top: -40%;
-	margin-left: 825.5%;
+	margin-left: 597%;
 	width: 20px;
 	height: 20px;
 }
 
 .box3{
 	float:right;
-	margin-top: -28%;
-	margin-right: -342%;
+	margin-top: -45%;
+	margin-right: -475%;
 	width: 20px;
 	height: 20px;
 }
