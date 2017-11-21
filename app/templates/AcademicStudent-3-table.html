@@ -77,10 +77,10 @@
 		</script>
 
 		<div class="Academic" >
+			<p>ACADEMIC : GRADE</p>
 
-			<p><u>ACADEMIC</u> : GRADE</p>
-
-		</div>
+	<div class="Academic2"> </div>
+	</div>
 		<div class="selectbar">
 					<form id="contact-form" action="/selectTerm", method="POST">
 						<select id="section"  name = "click" size="1" style="width:400px; font-size:25px;height:30px;color:#46445c; " >
@@ -93,10 +93,9 @@
 
 		{%for term in page %}
 
-
-		<div class="term" style="margin-left: -47%; font-size: 25px; color: #fff; margin-top: -2%;">{{term.Term}}</div>
-
 		</div>
+</br>
+		<div class="term" >{{term.Term}}</div>
 
 		<div class="table1">
 
@@ -133,15 +132,15 @@
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">THIS SEMESTER</td>
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px" align="center">{{academic2.This_semester}}</td>
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic2.GPA}}</td>
-				</tr>
-				{% endfor %}
+				</tr>				{% endfor %}
+
 			</table>
-		</div>
+		</div></br>
 		{% endfor %}
 
 		<div align="center" class="table3">
 
-			<table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
+			<table border="3" style="width:80%;color:#FFF; border-color:#000014;font-size:20px;" >
 
 				<tr>
 					<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >RESULT</th>

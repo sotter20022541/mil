@@ -23,7 +23,7 @@
 
 .table3{
 	margin-top:50px;
-	margin-left: -7.5%;
+	margin-left: -7%;
 }
 .Academic2{
 	height:45px;
@@ -32,4 +32,11 @@
 	margin-left: -1%; 
 	background-color:#000014;
 	z-index: 0;
+}
+
+.term{
+	margin-top: 0%;
+	margin-left: 4%;
+	color: #FFF;
+	font-size: 25px;
 }
