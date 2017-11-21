@@ -86,24 +86,28 @@
 		<div class="group" >
 
 			<form id="contact-form" action="/moreinfo", method="POST">
-			<image src="static/pictures/activity/{{activity.Photo}}" width="400"  height = "250"  class="en1" style="margin-top: 1%;">
-		<div style="margin-top : 7%;">
+			<image src="static/pictures/activity/{{activity.Photo}}" class="en1">
 			<div class="name-of-activity">Name of activity : {{activity.Name_Activity}}</div>
-			<div class="advisor">Advisor : {{activity.Advisor}}
+			<div class="advisor">Advisor : {{activity.Advisor}}</div>
 			<div class="date-duration">Date : {{activity.Date_Activity}}</div>
 			<div class="more-info"><input type="submit" name={{activity.Name_Activity}} value="more info >>" class="more-info-link"></div>
-			
-		</div>
 			</form>
 
 		</div>
 
+		<div class="group" >
 
+			<form id="contact-form" action="/moreinfo", method="POST">
+			<image src="static/pictures/activity/{{activity.Photo}}" class="en1">
+			<div class="name-of-activity">Name of activity : {{activity.Name_Activity}}</div>
+			<div class="advisor">Advisor : {{activity.Advisor}}</div>
+			<div class="date-duration">Date : {{activity.Date_Activity}}</div>
+			<div class="more-info"><input type="submit" name={{activity.Name_Activity}} value="more info >>" class="more-info-link"></div>
+			</form>
 
-			<div style="margin-top: 5%;">
-			</br></br>{% endfor %}
-			</div>
+		</div>
 
+		{% endfor %}
 
 	</body>
 
