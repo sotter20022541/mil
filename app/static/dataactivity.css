@@ -86,7 +86,7 @@
 }
 .Activity{
 	height:35px;
-	width: 9%;
+	width: 10%;
 	margin-top: 0%;
 	margin-left: 5%;
 	background-color:#000014;
@@ -94,5 +94,5 @@
 	color: #FFF;
 	padding-left: 15px;
 	padding-top: 12px;
-}
+	margin-bottom: 3%;
 }
