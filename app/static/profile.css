@@ -89,3 +89,15 @@
 .d1{
 	margin-left: 18%;
 }
+.Activity{
+	height:35px;
+	width: 9%;
+	margin-top: 0%;
+	margin-left: 5%;
+	background-color:#000014;
+	font-size: 25px;
+	color: #FFF;
+	padding-left: 15px;
+	padding-top: 12px;
+}
+}
