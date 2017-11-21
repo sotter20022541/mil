@@ -98,9 +98,9 @@
 							<div class="se"><input type="submit" value="select" class="in3"></div>
 						</form>
 
-						<div class="term"><b>{{SelectTerm}}</b></div>
-
 			</div>
+
+			<div class="term"><b>{{SelectTerm}}</b></div>
 
 			<div align="center" class="table1">
 
@@ -133,9 +133,8 @@
 						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
 						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
 					</tr>
+					
 					{%for academic2 in page2%}
-
-
 					<tr>
 						<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">THIS SEMESTER</td>
 						<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px" align="center">{{academic2.This_semester}}</td>
@@ -147,7 +146,7 @@
 						<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic2.GPAX}}</td>
 					</tr>
 					{% endfor %}
-	      </table>
+	      </table><br>
 
 			</div>
 

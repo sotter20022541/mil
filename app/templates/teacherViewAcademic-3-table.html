@@ -99,9 +99,11 @@
 						</form>
 						{%for term in page %}
 
-						<div class="term"><b>{{term.Term}}</b></div>
+						<!--<div class="term"><b>{{term.Term}}</b></div>-->
 
 			</div>
+
+			<div class="term"><b>{{term.Term}}</b></div>
 
 			<div align="center" class="table1">
 
@@ -132,7 +134,7 @@
 	        <tr>
 						<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >RESULT</th>
 						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
-						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA</th>
 					</tr>
 
 					{% for academic2 in term.GPA %}
@@ -146,6 +148,8 @@
 				{%endfor%}
 			</div>
 
+			<div class="term"><b>GPAX</b></div>
+
       <div align="center" class="table3">
 
 	      <table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
@@ -153,7 +157,7 @@
 	        <tr>
 						<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >RESULT</th>
 						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
-						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPAX</th>
 					</tr>
 
 					{% for academic2 in page2 %}
