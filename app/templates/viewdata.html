@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>View DATA</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='viewdata.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background_tea.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<form id="contact-form" action="/menubarTeacher", method="POST">
+						<input type="image" name="click" src="static/back_icon.jpg" width="6%">&nbsp;&nbsp;&nbsp;
+						PORTFOLIO&nbsp;&nbsp;&nbsp;&nbsp;
+						{{name}}
+
+				</div>
+
+				<div class="R">
+					<input name="click" type="image" value="home" src="static/home_icon.jpg" width="20%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="noti" src="static/nat.jpg" width="20%">&nbsp;&nbsp;&nbsp;
+				  </form>
+					<input class="out" name="click" type="image" value="logout" src="static/logout_icon.jpg" width="20%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+			
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+    <div class="data">
+
+      <div class="data-in">Profile</div>
+
+    </div>
+
+    <img src="static/student.png" width="15%" height="15%" class="pic">
+
+    <div class="in">
+
+			<form id="contact-form" action="/selectView", method="POST">
+      <div align="center"><input type="submit" name="click" value="PROFILE" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="ACADEMIC" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="WORK&EXPERIENCE" class="in2"></div>
+		  </form>
+
+    </div>
+
+	</body>
+</html>

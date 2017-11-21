@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>DataActivity</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='dataactivity.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<form id="contact-form" action="/menubar", method="POST">
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<div class="group" >
+			<image src="static/pictures/activity/{{page.Photo}}" width="30%" class="en1">
+			<div class="name-of-activity" style="margin:2%; margin-left:35%; margin-top: -18%; ">Name of Activity : {{page.Name_Activity}}</div>
+			<div class="date-of-activity">Date : {{page.Date_Activity}}</div>
+			<div class="advisor">Advisor : {{page.Advisor}}</div>
+			<div class="type">Type : {{page.Type}}</div>
+			<div class="description">Description : {{page.Description}}</div>
+			<div class="more-info"><input type="submit" name="" value="File" class="more-info-link"></div>
+
+
+		</div>
+		<div align="right" class="dataactivity-clk">
+
+			<form id="contact-form" action="/editAcButton", method="POST">
+			<input type = "submit" name={{page.Name_Activity}} value = "EDIT" class = "in2" >
+		  </form>
+			<input type = "submit" name={{page.Name_Activity}} value = "DELETE" class = "in2" >
+
+		</div>
+
+
+
+	</body>
+
+</html>

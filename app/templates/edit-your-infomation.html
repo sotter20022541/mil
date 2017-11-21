@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Edit your indomation</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-your-infomation.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popupback.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<form id="contact-form" action="/menubar", method="POST">
+
+				 <div style="margin-top: -5%; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+				</div>
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="containerback">
+
+			<div class="popupback">
+				<p>Do you want to leave without finishing ?</p>
+				<div class="optionback">
+          <form id="contact-form" action="/getleave", method="POST">
+					<input class="aback" type = "button" name="popup" value = "NO" />
+					<input  class ="bback" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="coverback">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".back").on('click',function(){
+					$(".coverback").fadeIn('slow');
+					$(".popupback").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.aback').on('click',function(){
+					$(".coverback").fadeOut('slow');
+					$(".popupback").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<form id="contact-form" action="/getEditInfo", method="POST">
+		<div class="Edityourinfomation" style="width: 280px;">Edit your information</div>
+
+		<div align="right" class="dataEdityourinfomation">
+
+			<div class="name">Name : <input id="text1" type = "text" name = "name" class = "in3"/></div>
+			<div class="surname">Surname : <input id="text1" type = "text" name = "surname" class = "in3"/></div>
+			<div class="nationality">Nationality : <input id="text1" type = "text" name = "nation" class = "in3"/></div>
+			<div class="date">Date of Birth : <input id="text1" type = "text" name = "bd" class = "in3"/></div>
+			<div class="birtholace">Birthplace : <input id="text1" type = "text" name = "bp" class = "in3"/></div>
+			<div class="congenital">Congenital Disease : <input id="text1" type = "text" name = "dis" class = "in3"/></div>
+			<div class="emer-contact">Emergency Ccontact  </div>
+			<div class="emer-phone">Phone Number : <input id="text1" type = "text" name = "emerphone" class = "in3"/></div>
+			<div class="reletive">Relative : <input id="text1" type = "text" name = "reletive" class = "in3"/></div>
+			<div class="contact">Contact  </div>
+			<div class="phone">Phon Number : <input id="text1" type = "text" name = "phone" class = "in3"/></div>
+			<div class="email">Email : <input id="text1" type = "text" name = "email" class = "in3"/></div>
+			<div class="address">Address : <input id="text1" type = "text" name = "address" class = "in3"/></div>
+
+		</div>
+
+		<div align="right" class="clk" style="margin-top: 2%; margin-right: 8%;">
+
+			<input type = "submit" value = "SAVE" class = "in2" >
+
+		</div>
+	</form>
+	</body>
+
+</html>

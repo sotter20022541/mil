@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>ADD GRADE</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='nametea.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background_tea.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<form id="contact-form" action="/menubarTeacher", method="POST">
+						<input type="image" name="click" value="back" src="static/back_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+						PORTFOLIO&nbsp;&nbsp;&nbsp;&nbsp;
+						{{name}}
+
+				</div>
+
+				<div class="R">
+					<input name="click" type="image" value="home" src="static/home_icon.jpg" width="30%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout" src="static/logout_icon.jpg" width="30%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+	<div class="data3">
+
+			<div class="data-in"><b>{{page2}}</b></div>
+
+    <div align="center" class="table1">
+
+      <table border="3" style="width:90%; color:#FFF; border-color:#000014;font-size:19px; " >
+
+        <tr>
+					<th style="background-color: #46445c; border-color:#46445c;font-size:20px; " >STUDENT ID</th>
+					<th style="background-color: #46445c; border-color:#46445c;font-size:20px;">NAME</th>
+					<th style="background-color: #46445c; border-color:#46445c;font-size:20px;">VIEW PROFILE</th>
+				</tr>
+<!--loop 3-->
+				{% for student in page %}
+        <tr>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{student.ID}}</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="60%" height="30px">&nbsp;&nbsp;&nbsp;{{student.Name}} {{student.Surname}}</td>
+					<form id="contact-form" action="/getView", method="POST">
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center"><input type = "submit" name={{student.ID}} value = "VIEW" class = "in2" ></td>
+				  </form>
+				</tr>
+				{% endfor %}
+
+      </table>
+  		</div>
+		</div>
+
+	</body>
+</html>

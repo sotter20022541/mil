@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>View Prpfile</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='viewdata.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background_tea.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<form id="contact-form" action="/menubarTeacher", method="POST">
+						<input type="image" name="click" value="back" src="static/back_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+						PORTFOLIO&nbsp;&nbsp;&nbsp;&nbsp;
+						{{name}}
+
+				</div>
+
+				<div class="R">
+					<input name="click" type="image" value="home" src="static/home_icon.jpg" width="30%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout" src="static/logout_icon.jpg" width="30%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<img src="static/pictures/profile/{{picS}}" class="pic">
+
+    <div class="in">
+
+			<form id="contact-form" action="/selectView", method="POST">
+      <div align="center"><input type="submit" name="click" value="PROFILE" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="ACADEMIC" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="WORK&EXPERIENCE" class="in2"></div>
+		  </form>
+
+    </div>
+
+    <div class="data">
+
+			{% for profile in page %}
+      <div class="data-in"><b>Profile</b></div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Name : {{profile.Name}}  {{profile.Surname}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Date of Birth : {{profile.Dateofbirth}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Birthplate : {{profile.Birthplace}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Nationality : {{profile.Nation}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Congenital Disease : {{profile.Disease}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Contact : </div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number : {{profile.Phonestudent}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email : {{profile.Email}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address : {{profile.Address}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Emergency contact : </div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number : {{profile.PhoneEmer}}</div>
+			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relative : {{profile.Relative}}</div>
+			{%endfor%}
+    </div>
+
+	</body>
+</html>

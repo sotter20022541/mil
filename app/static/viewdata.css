@@ -1,0 +1,175 @@
+.pic{
+  margin-top: 2%;
+  margin-left: 11.8%;
+  position: fixed;
+  width: 220px;
+  height: 250px;
+}
+
+.in2 {
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius: 5px;
+	border: 5px;
+	height: 30px;
+	width: 250px;
+	background-color: #e8e8e8;
+	color: #2e3940;
+  margin-top: 8%;
+  font-size: 20px;
+}
+
+.in2:hover , .in2:active{
+	background-color: #c1c1c1;
+	color: #2e3940;
+}
+
+.in{
+  background-color: #000014;
+  height: 185px;
+	width: 300px;
+  margin-top: 23%;
+  margin-left: 8%;
+  border-radius: 10px;
+	border: 5px;
+  position: fixed;
+}
+
+.data{
+  float: right;
+  background-color: #000014;
+  height: 530px;
+	width: 800px;
+  margin-top: 0%;
+  margin-right: 5%;
+  border-radius: 10px;
+	border: 5px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.data2{
+  float: right;
+  background-color: #000014;
+  height: 100px;
+	width: 800px;
+  margin-top: 0%;
+  margin-right: 5%;
+  border-radius: 10px;
+	border: 5px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.data3{
+  float: right;
+  background-color: #000014;
+  height: 50px;
+	width: 800px;
+  margin-top: 0%;
+  margin-right: 5%;
+  border-radius: 10px;
+	border: 5px;
+  color: #FFF;
+  font-size: 20px;
+}
+
+.data-in{
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-bottom: 0%;
+}
+
+.selectbar{
+	margin-top: 2%;
+	margin-left: 30%;
+	z-index: 1000;
+}
+
+.table1{
+	margin-top: 2%;
+	margin-left: 2%;
+}
+
+.table2{
+	margin-top: 2%;
+	margin-left: 2%;
+}
+
+.table3{
+	margin-top: 2%;
+	margin-left: 2%;
+  margin-bottom: 5%;
+}
+
+.in3 {
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius: 5px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+	background-color: #e8e8e8;
+	color: #2e3940;
+  margin-top: 8%;
+  font-size: 20px;
+}
+
+.in3:hover , .in2:active{
+	background-color: #c1c1c1;
+	color: #2e3940;
+}
+
+.se{
+  margin-top: -10.2%;
+	margin-left: 40%;
+}
+
+.term{
+  margin-top: 6%;
+	margin-left: -36%;
+  font-size: 25px;
+}
+
+.en1{
+	margin-top: 5%;
+	margin-left: 4%;
+  width: 250px;
+  height: 200px;
+}
+
+.name-of-activity{
+	font-size: 20px;
+	color: #FFF;
+	margin-top: -25%;
+	margin-left: 40%;
+}
+
+.advisor{
+	font-size: 20px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 40%;
+}
+
+.date-duration{
+	font-size: 20px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 40%;
+}
+
+.type{
+  font-size: 20px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 40%;
+}
+
+.description{
+  font-size: 20px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 40%;
+  margin-bottom: 5%;
+}

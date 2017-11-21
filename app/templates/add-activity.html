@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>add Activity</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popupback.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<form id="contact-form" action="/menubar", method="POST">
+
+				 <div style="margin-top: -5%; margin-left: 3%;">&nbsp;&nbsp;&nbsp;
+					<input  type="submit" name="click" value="PROFILE" class="link">&nbsp;
+					<input  type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;
+					<input  type="submit" name="click" value="WORK&EXPERIENCE" class="link" >&nbsp;&nbsp;&nbsp;</div>
+
+
+				</div>
+
+				<div class="R" >
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input  name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input  name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="containerback" style="margin-top: 5%;">
+
+			<div class="popupback">
+				<p>Do you want to leave without finishing ?</p>
+				<div class="optionback">
+          <form id="contact-form" action="/getleave", method="POST">
+					<input class="aback" type = "button" name="popup" value = "NO" />
+					<input  class ="bback" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="coverback">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".back").on('click',function(){
+					$(".coverback").fadeIn('slow');
+					$(".popupback").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.aback').on('click',function(){
+					$(".coverback").fadeOut('slow');
+					$(".popupback").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<div class="container" style="margin-top: 7%;">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<form id="contact-form" action="/getAddAc", method="POST">
+		<div align="left" class="dataEditactivity"><br>
+
+			Name of ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "text" name = "nameAc" style="width:31%;height:25px;"/><br><br>
+			Type :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:25px;"><br><br>
+			Date :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:25px;"/><br><br>
+			Photo of Activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;" /><br><br>
+			Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:25px;"/><br><br>
+			Description of Activity :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "des" style="width:58.5%;height:25px;"/><br><br>
+			File of Activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;" /><br><br>
+
+
+		</div>
+
+		</div>
+		<div align="right" class="save">
+
+			<input name="click" type = "submit"  value = "SAVE" class = "in2" />
+
+		</div>
+		</form>
+	</body>
+
+</html>

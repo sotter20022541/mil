@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Activity</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='activity.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+
+	</head>
+
+	<body>
+
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+					<form id="contact-form" action="/menubar", method="POST">
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+<div align="right" class="activity-clk" style="margin-top: 38%; position: fixed;">
+				<form id="contact-form" action="/getAddAcButton", method="POST">
+				<input type = "submit" name="click" value = "ADD" class = "in2" >
+				</form>
+
+			</div>
+		{%for activity in page %}
+
+		<div class="group" >
+
+			<form id="contact-form" action="/moreinfo", method="POST">
+			<image src="static/pictures/activity/{{activity.Photo}}" width="400"  height = "250"  class="en1" style="margin-top: 1%;">
+		<div style="margin-top : 7%;">
+			<div class="name-of-activity">Name of Activity : {{activity.Name_Activity}}</div>
+			<div class="advisor">Advisor : {{activity.Advisor}}
+			<div class="date-duration">Date : {{activity.Date_Activity}}</div>
+			<div class="more-info"><input type="submit" name={{activity.Name_Activity}} value="more info >>" class="more-info-link"></div>
+			
+		</div>
+			</form>
+
+		</div>
+
+
+
+			<div style="margin-top: 5%;">
+			</br></br>{% endfor %}
+			</div>
+
+
+	</body>
+
+</html>

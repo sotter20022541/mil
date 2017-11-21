@@ -1,0 +1,91 @@
+.in2 {
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius:20px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+	background-color: #e8e8e8;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+	margin-bottom: 5%;
+}
+
+.in2:hover , .in2:active{
+	background-color: #c1c1c1;
+	color: #2e3940;
+	box-shadow: -4px 5px #3c3e3d;
+}
+
+.dataactivity-clk{
+	float: left;
+	position: fixed;
+	margin-top: 5%;
+	margin-left: 88%;
+}
+
+.en1{
+	margin-top: 2%;
+	margin-left: 4%;
+}
+
+.name-of-activity{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: -22%;
+	margin-left: 35%;
+}
+
+.date-of-activity{
+	font-size: 30px;
+	color: #FFF;
+	margin-left: 35%;
+	margin-top: -1%;
+}
+
+.advisor{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 35%;
+}
+
+.type{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 35%;
+}
+
+.description{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 35%;
+}
+
+.flies{
+	font-size: 30px;
+	color: #FFF;
+	margin-top: 1%;
+	margin-left: 35%;
+}
+
+.cheak{
+  height: 22px;
+	width: 22px;
+}
+
+.more-info-link{
+	color: #FFF;
+	border: 5px;
+  background-color:hsla(290,100%,100%,0);
+  font-size: 24px;
+  text-decoration: underline;
+	margin-top: 1%;
+	margin-left: 35%;
+}
+
+.more-info-link:hover , .more-info-link:active{
+	color: #40494e;
+}

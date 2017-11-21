@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Print</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='print_choose.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+					<form id="contact-form" action="/menubar", method="POST">
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<div class="barPrint">PRINT</div><!--barPrint-->
+
+		<div align="right" ><!--button-->
+
+			<form id="contact-form" action="/selectall", method="POST">
+			<input type = "submit" name="click" value = "UNSELECTALL" class = "button12" >
+			<input type = "submit" name="click" value = "SELECTALL" class = "button12" >
+			</form>
+
+		</div>
+
+		<form id="contact-form" action="/checkBox", method="POST">
+
+			<div class="alphabet-proflie">PROFILE</div>
+
+			<div class="alphabet-P">
+
+				<label><div class="birth">Birthplace</div><input type="checkbox" name="birthplace" class="box13"></label>
+				<label><div class="congen">Congenital Disease</div><input type="checkbox" name="congenital disease" class="box15"></label>
+				<label><div class="contact">Contact</div><input type="checkbox" name="contact" class="box16"></label>
+
+			</div>
+
+			<div class="alphabet-academic">ACADEMIC</div>
+
+			<div class="alphabet-A">
+
+				<label><div>GPAX</div><input type="checkbox" name="gpax" class="box2"></label>
+
+			</div>
+
+			<div class="alphabet-work">WORK & EXPERIENCE</div>
+
+			<div class="alphabet-W">
+
+				{%for activity in page %}
+				<label>
+					<div class="name">{{activity.Name_Activity}}</div>
+					<input type="checkbox" name={{activity.Name_Activity}} class="box3" style="margin-left:20%;">
+				</label>
+				{% endfor %}
+
+			</div>
+
+		<div class="buttonCD">
+			<input type = "submit" name="click" value ="DONE" class="buttonDone" >
+
+		</div>
+
+	</body>
+	</form>
+
+</html>

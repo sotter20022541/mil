@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>View Academic</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='viewdata.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background_tea.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<form id="contact-form" action="/menubarTeacher", method="POST">
+						<input type="image" name="click" value="back" src="static/back_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+						PORTFOLIO&nbsp;&nbsp;&nbsp;&nbsp;
+						{{name}}
+
+				</div>
+
+				<div class="R">
+					<input name="click" type="image" value="home" src="static/home_icon.jpg" width="30%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout" src="static/logout_icon.jpg" width="30%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<img src="static/pictures/profile/{{picS}}" width="15%" height="15%" class="pic">
+
+    <div class="in">
+
+			<form id="contact-form" action="/selectView", method="POST">
+      <div align="center"><input type="submit" name="click" value="PROFILE" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="ACADEMIC" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="WORK&EXPERIENCE" class="in2"></div>
+		  </form>
+
+    </div>
+
+    <div class="data2">
+
+      <div class="data-in"><b>Academic</b></div>
+
+			<div class="selectbar">
+						<form id="contact-form" action="/TeacherSelectTerm", method="POST">
+							<select id="section"  name = "click" size="1" style="width:200px; font-size:20px;height:30px;color:#46445c; " >
+								{%for i in term%}
+								<option value={{i}}>{{i}}</option>
+								{%endfor%}
+							</select>
+							<div class="se"><input type="submit" value="select" class="in3"></div>
+						</form>
+						{%for term in page %}
+
+						<div class="term"><b>{{term.Term}}</b></div>
+
+			</div>
+
+			<div align="center" class="table1">
+
+	      <table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
+
+	        <tr>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >ID SUBJECT</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">NAME SUBJECT</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">ACADEMIC RECORD</th>
+					</tr>
+					{% for academic in term.Gragd %}
+	        <tr>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic.ID_Subject}}</td>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">{{academic.Name_Subject}}</td>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic.Credit}}</td>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic.Academic_Regcord}}</td>
+					</tr>
+					{%endfor%}
+	      </table>
+
+			</div>
+
+			<div align="center" class="table2">
+
+	      <table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
+
+	        <tr>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >RESULT</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
+					</tr>
+
+					{% for academic2 in term.GPA %}
+					<tr>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">THIS SEMESTER</td>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px" align="center">{{academic2.This_semester}}</td>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic2.GPA}}</td>
+					</tr>
+					{%endfor%}
+	      </table>
+				{%endfor%}
+			</div>
+
+      <div align="center" class="table3">
+
+	      <table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
+
+	        <tr>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >RESULT</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
+						<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
+					</tr>
+
+					{% for academic2 in page2 %}
+					<tr>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">RESULT</td>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px" align="center">{{academic2.Cumulative_credit}}</td>
+						<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic2.GPAX}}</td>
+					</tr>
+					{%endfor%}
+	      </table>
+
+			</div>
+
+    </div>
+
+	</body>
+</html>

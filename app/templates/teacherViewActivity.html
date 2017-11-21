@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>View Activity</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='viewdata.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background_tea.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+
+					<form id="contact-form" action="/menubarTeacher", method="POST">
+						<input type="image" name="click" value="back" src="static/back_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+						PORTFOLIO&nbsp;&nbsp;&nbsp;&nbsp;
+						{{name}}
+
+				</div>
+
+				<div class="R">
+					<input name="click" type="image" value="home" src="static/home_icon.jpg" width="30%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout" src="static/logout_icon.jpg" width="30%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<img src="static/pictures/profile/{{picS}}" width="15%" height="15%" class="pic">
+
+    <div class="in">
+
+			<form id="contact-form" action="/selectView", method="POST">
+      <div align="center"><input type="submit" name="click" value="PROFILE" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="ACADEMIC" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="WORK&EXPERIENCE" class="in2"></div>
+		  </form>
+
+    </div>
+
+    <div class="data3">
+
+      <div class="data-in"><b>Activity</b></div>
+
+			{%for act in page%}
+			<image src="static/pictures/activity/{{act.Photo}}" class="en1">
+			<div class="name-of-activity">Name of Activity : {{act.Name_Activity}}</div>
+			<div class="type">Type : {{act.Type}}</div>
+			<div class="advisor">Advisor : {{act.Advisor}}</div>
+			<div class="date-duration">Date : {{act.Date_Activity}}</div>
+			<div class="description">Description : {{act.Description}}</div>
+			{%endfor%}
+
+		</div>
+
+    </div>
+
+	</body>
+</html>

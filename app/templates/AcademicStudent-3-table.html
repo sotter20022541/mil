@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Academic</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='AcademicStudent.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+					<form id="contact-form" action="/menubar", method="POST">
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to logout ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "NO" />
+					<input  class ="b" type = "submit" name="popup" value = "YES" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<div class="Academic" >
+
+			<p><u>ACADEMIC</u> : GRADE</p>
+
+		</div>
+		<div class="selectbar">
+					<form id="contact-form" action="/selectTerm", method="POST">
+						<select id="section"  name = "click" size="1" style="width:400px; font-size:25px;height:30px;color:#46445c; " >
+							{%for i in term%}
+							<option value={{i}}>{{i}}</option>
+							{%endfor%}
+						</select>
+						<div class="in" style="margin-left: 45%; margin-top: -3%;"><input type="submit" value="select" class="in2" style="width: 100px; height: 30px;background-color: #46445c; border-color: #46445c; color: #fff; font-size: 18px;  "></div>
+					</form>
+
+		{%for term in page %}
+
+
+		<div class="term" style="margin-left: -47%; font-size: 25px; color: #fff; margin-top: -2%;">{{term.Term}}</div>
+
+		</div>
+
+		<div class="table1">
+
+			<table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
+
+				<tr>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >ID SUBJECT</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">NAME SUBJECT</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">ACADEMIC RECORD</th>
+				</tr>
+				{%for academic in term.Gragd %}
+				<tr>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic.ID_Subject}}</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">{{academic.Name_Subject}}</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic.Credit}}</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic.Academic_Regcord}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+
+		</div>
+
+		<div class="table2">
+			<table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
+
+				<tr>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >RESULT</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
+				</tr>
+				{%for academic2 in term.GPA %}
+				<tr>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">THIS SEMESTER</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px" align="center">{{academic2.This_semester}}</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic2.GPA}}</td>
+				</tr>
+				{% endfor %}
+			</table>
+		</div>
+		{% endfor %}
+
+		<div align="center" class="table3">
+
+			<table border="3" style="width:88%;color:#FFF; border-color:#000014;font-size:20px;" >
+
+				<tr>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;" >RESULT</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">CREDITS REGISTERED</th>
+					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPA/GPAX</th>
+				</tr>
+
+				{% for academic2 in page2 %}
+				<tr>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">RESULT</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px" align="center">{{academic2.Cumulative_credit}}</td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic2.GPAX}}</td>
+				</tr>
+				{%endfor%}
+			</table>
+
+		</div>
+
+	</body>
+
+</html>

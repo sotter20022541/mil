@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Edit Activity</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+					<form id="contact-form" action="/menubar", method="POST">
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you want to Exit ?</p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "Cancel" />
+					<input  class ="b" type = "submit" name="popup" value = "Exit" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+			$(document).ready(function(){
+				$('.cover').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<form id="contact-form" action="/getEditAc", method="POST">
+		<div align="left" class="dataEditactivity"><br>
+
+			NAME OF ACTIVITY :&nbsp;&nbsp;{{page}}<br><br>
+			TYPE :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:25px;"><br><br>
+			DATE/DURATION :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:25px;"/><br><br>
+			PHOTO OF ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;"/><br><br>
+			ADVISOR :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:25px;"/><br><br>
+			A DESCRIPTION THE ACTIVITY :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "des" style="width:58.5%;height:25px;"/><br><br>
+			FLIES OR DOCUMENTS RELEVANT TO THE ACTIVITY :&nbsp;&nbsp;<br><input id="text1" type = "file" name = "fileDoc" placeholder="SELECT FROM YOUR COMPUTER" style="width:58.5%;height:30px;"/>
+
+		</div>
+<!--
+		<div class="browse2">
+   			<input name="click" type="file" style="margin-top:63%;margin-left: 5%;width:40%;
+	height:25px;">
+		<div class="browse1">
+   			<input name="click" type="file" style="margin-top:72%;margin-left: 5%;width:40%;
+	height:25px;" >
+		</div>
+
+	</div>
+-->
+		<div align="right" class="save">
+
+			<input name={{page}} type = "submit"  value = "SAVE" class = "in2" />
+
+		</div>
+		</form>
+	</body>
+
+</html>
+
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<title>Edit Activity</title>
+
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="bar">
+
+			<div class="bar-in">
+
+				<div class="L">
+					<form id="contact-form" action="/menubar", method="POST">
+					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+
+				</div>
+
+				<div class="R">
+
+					{{name}}&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					</form>
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="container">
+
+			<div class="popup">
+				<p>Do you </p>
+				<div class="option">
+          <form id="contact-form" action="/getPopup", method="POST">
+					<input class="a" type = "button" name="popup" value = "Canl" />
+					<input  class ="b" type = "submit" name="popup" value = "Exit" />
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="cover">
+
+		</div>
+		<script type="../js/jquery-3.2.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$(".out").on('click',function(){
+					$(".cover").fadeIn('slow');
+					$(".popup").fadeIn('slow');
+				});
+			});
+			$(document).ready(function(){
+				$('.cover').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+			$(document).ready(function(){
+				$('.a').on('click',function(){
+					$(".cover").fadeOut('slow');
+					$(".popup").fadeOut('slow');
+				});
+			});
+
+		</script>
+
+		<form id="contact-form" action="/getEditAc", method="POST">
+		<div align="left" class="dataEditactivity"><br>
+
+			NAME OF ACTIVITY :&nbsp;&nbsp;{{page}}<br><br>
+			TYPE :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:25px;"><br><br>
+			DATE/DURATION :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:25px;"/><br><br>
+			PHOTO OF ACTIVITY :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;"/><br><br>
+			ADVISOR :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:25px;"/><br><br>
+			A DESCRIPTION THE ACTIVITY :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "des" style="width:58.5%;height:25px;"/><br><br>
+			FLIES OR DOCUMENTS RELEVANT TO THE ACTIVITY :&nbsp;&nbsp;<br><input id="text1" type = "file" name = "fileDoc" placeholder="SELECT FROM YOUR COMPUTER" style="width:58.5%;height:30px;"/>
+
+		</div>
+<!--
+		<div class="browse2">
+   			<input name="click" type="file" style="margin-top:63%;margin-left: 5%;width:40%;
+	height:25px;">
+		<div class="browse1">
+   			<input name="click" type="file" style="margin-top:72%;margin-left: 5%;width:40%;
+	height:25px;" >
+		</div>
+
+	</div>
+-->
+		<div align="right" class="save">
+
+			<input name={{page}} type = "submit"  value = "SAVE" class = "in2" />
+
+		</div>
+		</form>
+	</body>
+
+</html>

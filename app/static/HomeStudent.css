@@ -1,0 +1,94 @@
+.link1{
+	text-decoration: none;
+	background-color: #ff5345;
+	color: #FFF;
+	border-radius:20px;
+	border: 5px;
+	float: left;
+	margin-top: -27.5%;
+	margin-left: 50%;
+	font-size: 34px;
+	width: 30%;
+	height: 100px;
+}
+
+.link1:hover , .link1:active{
+	color: #ae342a;
+}
+
+.link2{
+	text-decoration: none;
+	color: #FFF;
+	background-color: #ff7e16;
+	border-radius:20px;
+	border: 5px;
+	float: left;
+	margin-top: -17%;
+	margin-left: 50%;
+	z-index: 2;
+	font-size: 34px;
+	width: 30%;
+	height: 100px;
+}
+
+.link2:hover , .link2:active{
+	color: #b04a11;
+}
+
+.link3{
+	text-decoration: none;
+	color: #FFF;
+	background-color: #ffca26;
+	border-radius:20px;
+	border: 5px;
+	float: left;
+	margin-top: -6.5%;
+	margin-left: 50%;
+	z-index: 2;
+	font-size: 34px;
+	width: 30%;
+	height: 100px;
+}
+
+.link3:hover , .link3:active{
+	color: #9c790f;
+
+}
+.pic{
+	float: left;
+	margin-left:22%;
+	margin-top:2%;
+	width: 220px;
+	height: 250px;
+}
+.Name{
+	float: left;
+	margin-top:25%;
+	margin-left: -20%;
+	color: #FFF;
+	font-size: 25px;
+}
+
+.id{
+	float: left;
+	margin-top:27%;
+	margin-left: -20%;
+	color: #FFF;
+	font-size: 25px;
+}
+
+.incycle{
+	float: left;
+	margin-top:-36%;
+	margin-left: 58%;
+	z-index: 2;
+	font-size: 34px;
+	color: #FFF;
+
+}
+.print{
+	background: url(I4_icon.png);
+	float: left;
+	margin-top: 1%;
+	margin-left: 85%;
+}
