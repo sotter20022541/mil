@@ -1,4 +1,4 @@
-.link1{
+.a1{
 	text-decoration: none;
 	background-color: #000019;
 	color: #FFF;
@@ -13,7 +13,7 @@
 	box-shadow: -1px 6px #3c3e3d;
 }
 
-.link1:hover , .link1:active{
+.a1:hover , .a1:active{
 	color: #40494e;
 	box-shadow: -1px 6px #3c3e3d;
 }

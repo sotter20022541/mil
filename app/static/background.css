@@ -34,6 +34,15 @@ body {
 	color: #40494e;
 }
 
+.link1{
+
+	font-size: 22px;
+	background-color:hsla(290,100%,100%,0);
+	color: #8b785a;
+	border: 5px;
+}
+
+
 .L{
 	float: left;
 	margin-top: 0.9%;
