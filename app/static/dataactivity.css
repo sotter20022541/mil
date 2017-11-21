@@ -89,3 +89,15 @@
 .more-info-link:hover , .more-info-link:active{
 	color: #40494e;
 }
+.Activity{
+	height:35px;
+	width: 9%;
+	margin-top: 0%;
+	margin-left: 5%;
+	background-color:#000014;
+	font-size: 25px;
+	color: #FFF;
+	padding-left: 15px;
+	padding-top: 12px;
+}
+}
