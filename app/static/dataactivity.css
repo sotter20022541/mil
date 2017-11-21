@@ -25,50 +25,45 @@
 }
 
 .en1{
-	margin-top: 2%;
-	margin-left: 4%;
+	margin-top: 0%;
+	margin-left: 10%;
+  width: 350px;
+  height: 250px;
 }
 
 .name-of-activity{
-	font-size: 30px;
+	font-size: 25px;
 	color: #FFF;
-	margin-top: -22%;
-	margin-left: 35%;
+	margin-top: -18%;
+	margin-left: 40%;
 }
 
 .date-of-activity{
-	font-size: 30px;
+	font-size: 25px;
 	color: #FFF;
-	margin-left: 35%;
-	margin-top: -1%;
+	margin-top: 1%;
+	margin-left: 40%;
 }
 
 .advisor{
-	font-size: 30px;
+	font-size: 25px;
 	color: #FFF;
 	margin-top: 1%;
-	margin-left: 35%;
+	margin-left: 40%;
 }
 
 .type{
-	font-size: 30px;
+	font-size: 25px;
 	color: #FFF;
 	margin-top: 1%;
-	margin-left: 35%;
+	margin-left: 40%;
 }
 
 .description{
-	font-size: 30px;
+	font-size: 25px;
 	color: #FFF;
 	margin-top: 1%;
-	margin-left: 35%;
-}
-
-.flies{
-	font-size: 30px;
-	color: #FFF;
-	margin-top: 1%;
-	margin-left: 35%;
+	margin-left: 40%;
 }
 
 .cheak{
@@ -83,7 +78,7 @@
   font-size: 24px;
   text-decoration: underline;
 	margin-top: 1%;
-	margin-left: 35%;
+	margin-left: 39.6%;
 }
 
 .more-info-link:hover , .more-info-link:active{
