@@ -1,21 +1,14 @@
-.Academic{
-	margin: 20px;
-	font-size: 40px;
-	color: #FFF;
-	padding-left: 4%;
-	z-index: 1000;
 
-
-}
 .selectbar{
 	margin-top:20px;
-	margin-left: 35%;
-	z-index: 1000;
+	margin-left: 30%;
 }
+
 .table1{
 	margin-top:50px;
 	margin-left: 4%;
 }
+
 .table2{
 	margin-top:50px;
 	margin-left: 4%;
@@ -26,12 +19,15 @@
 	margin-left: -7%;
 }
 .Academic2{
-	height:45px;
+	height:35px;
 	width: 19%;
-	margin-top: -6.7%;
-	margin-left: -1%; 
+	margin-top: 0%;
+	margin-left: 5%;
 	background-color:#000014;
-	z-index: 0;
+	font-size: 25px;
+	color: #FFF;
+	padding-left: 15px;
+	padding-top: 12px;
 }
 
 .term{
@@ -40,4 +36,3 @@
 	color: #FFF;
 	font-size: 25px;
 }
-
