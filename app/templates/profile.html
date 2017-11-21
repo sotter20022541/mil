@@ -77,11 +77,7 @@
 
 	</br>
 
-		<div align="left" class="pic2">
-
-			<img src="static/pictures/profile/{{picS}}" width="250" height="250">
-
-		</div>
+		<img src="static/pictures/profile/{{picS}}" align="left" class="pic2">
 
 		<div align="left" class="profile" >
 		<div class="four">
@@ -92,21 +88,22 @@
 			<b>Nationality : </b>  {{profile.Nation}}<br>
 			<b>Congenital Disease :</b>  {{profile.Disease}}<br>
 			<b>Emergency Contact :</b>  {{profile.Relative}} {{profile.PhoneEmer}}<br>
-			<b>Contact :</b>  {{profile.Phonestudent}} <br> {{profile.Address}} <br> {{profile.Email}}
+			<b>Contact :</b> {{profile.Phonestudent}}
+			<div class="d1">{{profile.Address}}</div>
+			<div class="d1">{{profile.Email}}</div>
 			{% endfor %}
 		</div>
 		</div>
+		
 		<form id="contact-form" action="/editInfo", method="POST">
-
-		<input type = "submit" name="click" value = "EDIT" class = "in2" >
 
 		<div class="clk">
 
-
 			<input type = "submit" name="click" value = "EDIT" class = "in2" >
-		  </form>
 
 		</div>
+
+		</form>
 
 	</body>
 
