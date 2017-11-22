@@ -79,7 +79,6 @@
 			});
 
 		</script>
-		<div class="Activity">EDIT ACTIVITY</div>
 		<div class="container">
 
 			<div class="popup">
@@ -113,19 +112,21 @@
 
 		</script>
 
-		<form id="contact-form" action="/getEditAc", method="POST">
-		<div align="left" class="dataEditactivity"><br>
+		<div class="Activity">EDIT ACTIVITY</div>
 
-			Name of Activity :&nbsp;&nbsp;{{page}}<br><br>
-			Type :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:23px;"><br><br>
-			Date :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:23px;"/><br><br>
-			Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:23px;"/><br><br>
-			Description of Activity :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "des" style="width:58.5%;height:23px;"/><br><br>
+		<form id="contact-form" action="/getEditAc", method="POST">
+		<div align="left" class="dataEditactivity">
+
+			<div class="br">Name of Activity :&nbsp;&nbsp;{{page}}</div>
+			<div class="br">Type :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:23px;"></div>
+			<div class="br">Date :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:23px;"/></div>
+			<div class="br">Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:23px;"/></div>
+			<div class="br">Description of Activity :&nbsp;&nbsp;<div class="br"><input id="text1" type = "text" name = "des" style="width:58.5%;height:23px;"/></div></div>
 
 
 		</div>
-		
-		<div align="right" class="save">
+
+		<div class="save2">
 
 			<input name={{page}} type = "submit"  value = "SAVE" class = "in2" />
 

@@ -23,10 +23,9 @@
 
 				<div class="L">
 
-					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
 					<form id="contact-form" action="/menubar", method="POST">
-
-				 <div style="margin-top: -5%; margin-left: 3%;">&nbsp;&nbsp;&nbsp;
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+				 	<div style="margin-top: -5%; margin-left: 3%;">&nbsp;&nbsp;&nbsp;
 					<input  type="submit" name="click" value="PROFILE" class="link">&nbsp;
 					<input  type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;
 					<input  type="submit" name="click" value="WORK&EXPERIENCE" class="link1" >&nbsp;&nbsp;&nbsp;</div>
@@ -36,10 +35,10 @@
 
 				<div class="R" >
 					{{name}}&nbsp;&nbsp;&nbsp;
-					<input  name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
-					<input  name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input  name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<input  name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
 					</form>
-					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
 
 				</div>
 
@@ -115,21 +114,21 @@
 		<div class="Activity">ADD ACTIVITY</div>
 
 		<form id="contact-form" action="/getAddAc", method="POST">
-		<div align="left" class="dataEditactivity"><br>
+		<div align="left" class="dataEditactivity">
 
-			Name of activity :&nbsp;&nbsp;<input id="text1" type = "text" name = "nameAc" style="width:31%;height:25px;"/><br><br>
-			Type :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:25px;"><br><br>
-			Date :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:25px;"/><br><br>
-			Photo of activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;" /><br><br>
-			Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:25px;"/><br><br>
-			Description of activity :&nbsp;&nbsp;<br><br><input id="text1" type = "text" name = "des" style="width:58.5%;height:25px;"/><br><br>
-			File of activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;" /><br><br>
+			<div class="br">Name of activity :&nbsp;&nbsp;<input id="text1" type = "text" name = "nameAc" style="width:39%;height:25px;"/></div>
+			<div class="br">Type :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:51.2%;height:25px;"></div>
+			<div class="br">Date :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:51.4%;height:25px;"/></div>
+			<div class="br">Photo of activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;font-size: 20px;" /></div>
+			<div class="br">Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:47.8%;height:25px;"/></div>
+			<div class="br">Description of activity :&nbsp;&nbsp;<div class="br"><input id="text1" type = "text" name = "des" style="width:58.8%;height:25px;"/></div></div>
+			<div class="br">File of activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;font-size: 20px;"/></div>
 
-
-		</div>
 
 		</div>
-		<div align="right" class="save">
+
+		</div>
+		<div class="save">
 
 			<input name="click" type = "submit"  value = "SAVE" class = "in2" />
 

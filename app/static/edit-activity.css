@@ -1,8 +1,11 @@
 .dataEditactivity{
 	color: #FFF;
-	font-size: 30px;
-	margin-left: 25%;
-	margin-top: -4%;
+	font-size: 25px;
+	margin-left: 30%;
+}
+
+.br{
+	margin-top: 2%;
 }
 
 .browse2{
@@ -11,9 +14,17 @@
 
 
 }
+
 .save{
-	margin-top:0%;
-	margin-right: 5%;
+	margin-top:2%;
+	margin-left: 88%;
+	position: fixed;
+}
+
+.save2{
+	margin-top:8.5%;
+	margin-left: 88%;
+	position: fixed;
 }
 .activity{
 	margin-top: -28%;
@@ -37,7 +48,7 @@
 }
 .Activity{
 	height:35px;
-	width: 13%;
+	width: 14.5%;
 	margin-top: 0%;
 	margin-left: 5%;
 	background-color:#000014;
@@ -45,5 +56,6 @@
 	color: #FFF;
 	padding-left: 15px;
 	padding-top: 12px;
+	margin-bottom: 4%;
 }
 }
