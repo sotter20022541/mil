@@ -41,10 +41,9 @@ body {
 	border: 5px;
 }
 
-
 .L{
 	float: left;
-	margin-top: 0.8%;
+	margin-top: 1.1%;
 	margin-left: 2%;
 }
 
@@ -52,16 +51,22 @@ body {
 	float: right;
 	margin-top: 1.1%;
 	margin-right: 2%;
+	font-size: 25px;
 }
 
 .back{
 	float: left;
-	margin-top: 0.3%;
-	margin-left: 0%;
+	width: 25px;
+	height: 25px;
 }
 
 .name-bar{
-	float: left;
+	float: right;
 	margin-top: -1%;
 	font-size: 25px;
+}
+
+.bar-pic{
+	width: 25px;
+	height: 25px;
 }
