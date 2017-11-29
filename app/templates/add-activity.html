@@ -8,7 +8,7 @@
 		<title>add Activity</title>
 
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
-		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bgaddactivity.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popupback.css')}}" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -23,22 +23,23 @@
 
 				<div class="L">
 
-					<form id="contact-form" action="/menubar", method="POST">
-					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
-				 	<div style="margin-top: -5%; margin-left: 3%;">&nbsp;&nbsp;&nbsp;
-					<input  type="submit" name="click" value="PROFILE" class="link">&nbsp;
-					<input  type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;
-					<input  type="submit" name="click" value="WORK&EXPERIENCE" class="link1" >&nbsp;&nbsp;&nbsp;</div>
 
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="5.5%">&nbsp;&nbsp;&nbsp;
+					<form id="contact-form" action="/menubar", method="POST">
+					<input  type="submit" name="click" value="PROFILE" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input  type="submit" name="click" value="ACADEMIC" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input  type="submit" name="click" value="WORK&EXPERIENCE" class="link1" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+
+				</div>
 
 				</div>
 
 				<div class="R" >
-					{{name}}&nbsp;&nbsp;&nbsp;
-					<input  name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
-					<input  name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<div class="name">{{name}}</div>&nbsp;&nbsp;&nbsp;
+					<input  name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="14.5%">&nbsp;&nbsp;&nbsp;
+					<input  name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="14.5%">&nbsp;&nbsp;&nbsp;
 					</form>
-					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="14.5%">
 
 				</div>
 
@@ -122,17 +123,25 @@
 			<div class="br">Photo of activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;font-size: 20px;" /></div>
 			<div class="br">Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:47.8%;height:25px;"/></div>
 			<div class="br">Description of activity :&nbsp;&nbsp;<div class="br"><input id="text1" type = "text" name = "des" style="width:58.8%;height:25px;"/></div></div>
-			<div class="br">File of activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "photo" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;font-size: 20px;"/></div>
+			<div class="br">File of activity :&nbsp;&nbsp;<input id="text1" type = "file" name = "File" placeholder="SELECT FROM YOUR COMPUTER" style="width:30%;height:25px;font-size: 20px;"/></div>
 
 
 		</div>
 
 		</div>
+
 		<div class="save">
 
 			<input name="click" type = "submit"  value = "SAVE" class = "in2" />
 
 		</div>
+
+		<div class="save3">
+
+			<input name="click" type = "submit"  value = "CANCLE" class = "in2" />
+
+		</div>
+
 		</form>
 	</body>
 

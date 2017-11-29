@@ -32,6 +32,7 @@ class Disease(Base):
 
 class Activity(Base):
     __tablename__ = 'Activity'
+    id = Column(Integer,primary_key=True)
     id_student = Column(Integer,primary_key=True)
     NameActivity = Column(String,primary_key=True)
     Description = Column(String,nullable=True)

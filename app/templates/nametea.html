@@ -91,12 +91,12 @@
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{student.ID}}</td>
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="60%" height="30px">&nbsp;&nbsp;&nbsp;{{student.Name}} {{student.Surname}}</td>
 					<form id="contact-form" action="/getView", method="POST">
-					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center"><input type = "submit" name={{student.ID}} value = "VIEW" class = "in2" ></td>
+					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center"><input type = "submit" name={{student.ID}} value = "VIEW" class = "in2" style="cursor:pointer"></td>
 				  </form>
 				</tr>
 				{% endfor %}
 
-      </table>
+      </table></br>
   		</div>
 		</div>
 

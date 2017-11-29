@@ -8,7 +8,7 @@
 		<title>Edit Activity</title>
 
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='edit-activity.css')}}" />
-		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='background.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='bgeditactivity.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popup.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='popupback.css')}}" />
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -22,22 +22,19 @@
 			<div class="bar-in">
 
 				<div class="L">
-
-					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%" style="margin-top: 0.5%;">&nbsp;&nbsp;&nbsp;
-					<form id="contact-form" action="/menubar", method="POST">
-
-				 <div style="margin-top: -5%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="PROFILE" class="link">
-					<input type="submit" name="click" value="ACADEMIC" class="link">
-					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link1"></div>
-
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%" style="margin-top: 0.5%;">
+			<div class ="L1">
+					<input class="back1" type="submit" name="click" value="PROFILE" style="cursor:pointer">
+					<input class="back2" type="submit" name="click" value="ACADEMIC" style="cursor:pointer" >
+					<input class="back3" type="submit" name="click" value="WORK&EXPERIENCE" style="cursor:pointer"> 
+</div>
+				
 				</div>
-
 				<div class="R">
 
 					{{name}}&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input class="back4" name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<input class="back5" name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
 					</form>
 					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
 
@@ -71,6 +68,37 @@
 				});
 			});
 
+			$(document).ready(function(){
+				$(".back1").on('click',function(){
+					$(".coverback").fadeIn('slow');
+					$(".popupback").fadeIn('slow');
+				});
+			});
+			$(document).ready(function(){
+				$(".back2").on('click',function(){
+					$(".coverback").fadeIn('slow');
+					$(".popupback").fadeIn('slow');
+				});
+			});
+			$(document).ready(function(){
+				$(".back3").on('click',function(){
+					$(".coverback").fadeIn('slow');
+					$(".popupback").fadeIn('slow');
+				});
+			});
+		
+			$(document).ready(function(){
+				$(".back4").on('click',function(){
+					$(".coverback").fadeIn('slow');
+					$(".popupback").fadeIn('slow');
+				});
+			});
+			$(document).ready(function(){
+				$(".back5").on('click',function(){
+					$(".coverback").fadeIn('slow');
+					$(".popupback").fadeIn('slow');
+				});
+			});
 			$(document).ready(function(){
 				$('.aback').on('click',function(){
 					$(".coverback").fadeOut('slow');
@@ -118,9 +146,9 @@
 		<div align="left" class="dataEditactivity">
 
 			<div class="br">Name of Activity :&nbsp;&nbsp;{{page}}</div>
-			<div class="br">Type :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:49%;height:23px;"></div>
-			<div class="br">Date :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:35%;height:23px;"/></div>
-			<div class="br">Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:44%;height:23px;"/></div>
+			<div class="br">Type :&nbsp;&nbsp;<input id="text1" type = "text" name = "type" style="width:51%;height:23px;"></div>
+			<div class="br">Date :&nbsp;&nbsp;<input id="text1" type = "text" name = "date" style="width:51%;height:23px;"/></div>
+			<div class="br">Advisor :&nbsp;&nbsp;<input id="text1" type = "text" name = "advisor" style="width:47.5%;height:23px;"/></div>
 			<div class="br">Description of Activity :&nbsp;&nbsp;<div class="br"><input id="text1" type = "text" name = "des" style="width:58.5%;height:23px;"/></div></div>
 
 
@@ -128,9 +156,16 @@
 
 		<div class="save2">
 
-			<input name={{page}},{{page2}} type = "submit"  value = "SAVE" class = "in2" />
+			<input name={{page}},{{page2}} type = "submit"  value = "SAVE" class = "in2" style="cursor:pointer" />
 
 		</div>
+
+		<div class="save4">
+
+			<input name={{page}},{{page2}} type = "submit"  value = "CANCLE" class = "in2" style="cursor:pointer" />
+
+		</div>
+
 		</form>
 	</body>
 

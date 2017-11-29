@@ -82,6 +82,12 @@ class return_Method:
         for user in query.filter_by(id_student = "{}".format(self.data)):
             return user.Photo
 
+    def Act_id(self):
+        box = []
+        for user in Acque.filter_by(id_student = "{}".format(self.data)):
+            box.append(user.id)
+        return box
+
     def Act_name(self):
         box = []
         for user in Acque.filter_by(id_student = "{}".format(self.data)):
@@ -149,10 +155,10 @@ class return_data(return_Method):
         dataPro.append(dicPro)
         return dataPro
 
-    def DicAct(self,NameAct = None, Descrip = None, Photo = None, Type = None, Advisor = None, Date = None, File = None, Confirm = None ):
+    def DicAct(self,id = None, NameAct = None, Descrip = None, Photo = None, Type = None, Advisor = None, Date = None, File = None, Confirm = None ):
         dataAct = []
-        for item in range(len(NameAct)):
-            dicAct = {'Name_Activity' : NameAct[item], 'Description' : Descrip[item], 'Photo' : Photo[item], 'Type' : Type[item], 'Advisor' : Advisor[item], 'Date_Activity' : Date[item], 'File' : File[item], 'Confirm' : Confirm[item]}
+        for item in range(len(id)):
+            dicAct = {'id' : id[item],'Name_Activity' : NameAct[item], 'Description' : Descrip[item], 'Photo' : Photo[item], 'Type' : Type[item], 'Advisor' : Advisor[item], 'Date_Activity' : Date[item], 'File' : File[item], 'Confirm' : Confirm[item]}
             dataAct.append(dicAct)
         return dataAct
 
@@ -178,10 +184,25 @@ class Edit:
         session.add(sth)
         session.commit()
 
-    def deleteAct(self,name): # delete function
-        spinach = session.query(Activity).filter_by(id_student = "{}".format(self.id), NameActivity = "{}".format(name)).one()
+    def deleteAct(self,id,name): # delete function
+        spinach = session.query(Activity).filter_by(id = "{}".format(id), id_student = "{}".format(self.id), NameActivity = "{}".format(name)).one()
         session.delete(spinach)
         session.commit()
+        box_id=[]
+        box2 = []
+        for instance in session.query(Activity).order_by(Activity.id_student):
+            x = instance.id_student
+            y = instance.NameActivity
+            if(x == int(self.id) and (y == name)) :
+                box_id.append(instance.id)
+        for itemm in range(len(box_id)):
+            box2.append(itemm+1)
+        dicA = dict((key, value) for (key, value) in zip(box_id, box2))
+        for item in dicA:
+            addData = session.query(Activity).filter_by(id = "{}".format(item),id_student="{}".format(self.id),NameActivity = "{}".format(name)).one()
+            addData.id = "{}".format(dicA[item])
+            session.add(addData)
+            session.commit()
 
 class Add_Method:
 
@@ -271,48 +292,55 @@ class Add_Method:
         session.commit()
 
     def Act_name(self,nameAct):
-        sth = Activity(id_student = "{}".format(self.id),NameActivity = "{}".format(nameAct))
+        box = []
+        for instance in session.query(Activity).order_by(Activity.id_student):
+            x = instance.id_student
+            if(x == int(self.id)) :
+                box.append(x)
+        id = (len(box))+1
+        sth = Activity(id ="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct))
         session.add(sth)
         session.commit()
+        return id
 
-    def Act_des(self,data,nameAct):
-        addData = session.query(Activity).filter_by(id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
+    def Act_des(self,id,data,nameAct):
+        addData = session.query(Activity).filter_by(id="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
         addData.Description = "{}".format(data)
         session.add(addData)
         session.commit()
 
-    def Act_photo(self,data,nameAct):
-        addData = session.query(Activity).filter_by(id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
+    def Act_photo(self,id,data,nameAct):
+        addData = session.query(Activity).filter_by(id="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
         addData.Photo = "{}".format(data)
         session.add(addData)
         session.commit()
 
-    def Act_type(self,data,nameAct):
-        addData = session.query(Activity).filter_by(id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
+    def Act_type(self,id,data,nameAct):
+        addData = session.query(Activity).filter_by(id="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
         addData.Type = "{}".format(data)
         session.add(addData)
         session.commit()
 
-    def Act_advisor(self,data,nameAct):
-        addData = session.query(Activity).filter_by(id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
+    def Act_advisor(self,id,data,nameAct):
+        addData = session.query(Activity).filter_by(id="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
         addData.Advisor = "{}".format(data)
         session.add(addData)
         session.commit()
 
-    def Act_date(self,data,nameAct):
-        addData = session.query(Activity).filter_by(id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
+    def Act_date(self,id,data,nameAct):
+        addData = session.query(Activity).filter_by(id="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
         addData.Date_Activity = "{}".format(data)
         session.add(addData)
         session.commit()
 
-    def Act_file(self,data,nameAct):
-        addData = session.query(Activity).filter_by(id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
+    def Act_file(self,id,data,nameAct):
+        addData = session.query(Activity).filter_by(id="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
         addData.File = "{}".format(data)
         session.add(addData)
         session.commit()
 
-    def Act_confirm(self,data,nameAct):
-        addData = session.query(Activity).filter_by(id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
+    def Act_confirm(self,id,data,nameAct):
+        addData = session.query(Activity).filter_by(id="{}".format(id),id_student="{}".format(self.id),NameActivity = "{}".format(nameAct)).one()
         addData.Confirm = "{}".format(data)
         session.add(addData)
         session.commit()
@@ -545,6 +573,7 @@ class Check:
             for item in list_idSub:
                 if item not in box:
                     box.append(item)
+
             return box
 
         def all_student(self):

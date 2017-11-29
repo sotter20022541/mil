@@ -21,20 +21,20 @@
 
 				<div class="L">
 					<form id="contact-form" action="/menubar", method="POST">
-					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="PROFILE" class="link1">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link1" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link" style="cursor:pointer">
 
 				</div>
 
 				<div class="R">
 
-					{{name}}&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<div class="name-bar">{{name}}</div>&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="13.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="13.5%">&nbsp;&nbsp;&nbsp;
 					</form>
-					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="13.5%">
 
 				</div>
 
@@ -74,36 +74,28 @@
 			});
 
 		</script>
+		<form id="contact-form" action="/editInfo", method="POST">
+		<div class="clk"><input type = "submit" name="click" value = "EDIT" class = "in2" style="cursor:pointer" ></div>
+		</form>
 
-	</br>
 		<div class="Activity">PROFILE</div>
 		<img src="static/pictures/profile/{{picS}}" align="left" class="pic2">
 
 		<div align="left" class="profile" >
 		<div class="four">
 			{%for profile in page %}
-			<b>Name :</b>  {{profile.Name}} {{profile.Surname}}<br>
-			<b>Date of Birth :</b>  {{profile.Dateofbirth}}<br>
-			<b>Birthplace :</b>  {{profile.Birthplace}}<br>
-			<b>Nationality : </b>  {{profile.Nation}}<br>
-			<b>Congenital Disease :</b>  {{profile.Disease}}<br>
-			<b>Emergency Contact :</b>  {{profile.Relative}} {{profile.PhoneEmer}}<br>
-			<b>Contact :</b> {{profile.Phonestudent}}
-			<div class="d1">{{profile.Address}}</div>
+			<div><b>Name :</b><div class="d1">{{profile.Name}} {{profile.Surname}}</div></div>
+			<div><b>Date of Birth :</b><div class="d1">{{profile.Dateofbirth}}</div></div>
+			<div><b>Birthplace :</b><div class="d1">{{profile.Birthplace}}</div></div>
+			<div><b>Nationality : </b><div class="d1">{{profile.Nation}}</div></div>
+			<div><b>Congenital Disease :</b><div class="d1">{{profile.Disease}}</div></div>
+			<div><b>Emergency Contact :</b><div class="d1">{{profile.Relative}} {{profile.PhoneEmer}}</div></div>
+			<div><b>Contact :</b><div class="d1">{{profile.Phonestudent}}</div></div><br>
+			<div class="d1">{{profile.Address}}</div><br>
 			<div class="d1">{{profile.Email}}</div>
 			{% endfor %}
 		</div>
 		</div>
-		
-		<form id="contact-form" action="/editInfo", method="POST">
-
-		<div class="clk">
-
-			<input type = "submit" name="click" value = "EDIT" class = "in2" >
-
-		</div>
-
-		</form>
 
 	</body>
 

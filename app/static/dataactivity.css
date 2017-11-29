@@ -9,7 +9,7 @@
 	color: #2e3940;
 	box-shadow: -4px 5px #3c3e3d;
 	margin-bottom: 0%;
-	margin-top: 12%;
+	margin-top: 36%;
 	margin-left: 88%;
 	position: fixed;
 }
@@ -29,7 +29,7 @@
 	color: #2e3940;
 	box-shadow: -4px 5px #3c3e3d;
 	margin-bottom: 5%;
-	margin-top: 12%;
+	margin-top: 36%;
 	margin-left: 79%;
 	position: fixed;
 }
@@ -94,10 +94,8 @@
 	color: #FFF;
 	border: 5px;
   background-color:hsla(290,100%,100%,0);
-  font-size: 24px;
+  font-size: 25px;
   text-decoration: underline;
-	margin-top: 1%;
-	margin-left: 39.6%;
 }
 
 .more-info-link:hover , .more-info-link:active{
@@ -114,4 +112,11 @@
 	padding-left: 15px;
 	padding-top: 12px;
 	margin-bottom: 3%;
+}
+
+.more-info{
+	color: #FFF;
+	margin-top: 1%;
+	font-size: 25px;
+	margin-left: 40%;
 }

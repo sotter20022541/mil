@@ -23,9 +23,9 @@
 				<div class="L">
 					<form id="contact-form" action="/menubar", method="POST">
 					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+					<input type="submit" name="click" value="PROFILE" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link" style="cursor:pointer">
 
 				</div>
 
@@ -78,6 +78,11 @@
 
     <div class="barPrint">PRINT</div>
 
+		<form id="contact-form" action="/getPrindataButton", method="POST">
+		<div class="save-clk"><input type = "submit" name="click" value = "SAVE" class = "in2" style="cursor:pointer"></div>
+		<div class="edit-clk"><input type = "submit" name="click" value = "EDIT" class = "in2" style="cursor:pointer"></div>
+		</form>
+
     <div align="left" class="font-FFF">
 			{% for data in page %}
       <div class="profile"><b>Profile</b></div>
@@ -111,11 +116,6 @@
 
 		</div>
 		{% endfor %}
-
-		<form id="contact-form" action="/getPrindataButton", method="POST">
-		<div class="save-clk"><input type = "submit" name="click" value = "SAVE" class = "in2" ></div>
-		<div class="edit-clk"><input type = "submit" name="click" value = "EDIT" class = "in2" ></div>
-		</form>
 
 	</body>
 

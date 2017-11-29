@@ -122,12 +122,14 @@
 }
 
 .save-clk{
-	margin-top: 8%;
+	margin-top: 34%;
 	margin-left: 78%;
+	position: fixed;
 }
 
 .edit-clk{
-	margin-top: -2.3%;
+	margin-top: 34%;
 	margin-left: 88%;
-	margin-bottom: 2%
+	margin-bottom: 2%;
+	position: fixed;
 }

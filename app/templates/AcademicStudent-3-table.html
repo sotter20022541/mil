@@ -22,20 +22,20 @@
 
 				<div class="L">
 					<form id="contact-form" action="/menubar", method="POST">
-					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="ACADEMIC" class="link1">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link">
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link1" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link" style="cursor:pointer">
 
 				</div>
 
 				<div class="R">
 
-					{{name}}&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="9.5%">&nbsp;&nbsp;&nbsp;
+					<div class="name-bar">{{name}}</div>&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="13.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="13.5%">&nbsp;&nbsp;&nbsp;
 					</form>
-					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="9.5%">
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="13.5%">
 
 				</div>
 
@@ -85,7 +85,7 @@
 							<option value={{i}}>{{i}}</option>
 							{%endfor%}
 						</select>
-						<div class="in" style="margin-left: 45%; margin-top: -3%;"><input type="submit" value="select" class="in2" style="width: 100px; height: 30px;background-color: #46445c; border-color: #46445c; color: #fff; font-size: 18px;  "></div>
+						<div class="in" style="margin-left: 45%; margin-top: -3%;"><input type="submit" value="select" class="in2" style="width: 100px; height: 30px;background-color: #46445c; border-color: #46445c; color: #fff; font-size: 18px; cursor: pointer; "></div>
 					</form>
 
 		{%for term in page %}
@@ -134,7 +134,7 @@
 			</table>
 		</div></br>
 		{% endfor %}
-
+		{% for academic2 in page2 %}
 		<div class="term">GPAX</div>
 
 		<div align="center" align="center" class="table3">
@@ -147,15 +147,15 @@
 					<th style="background-color: #46445c; border-color:#000014;font-size:20px;">GPAX</th>
 				</tr>
 
-				{% for academic2 in page2 %}
+
 				<tr>
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px">RESULT</td>
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="40%" height="30px" align="center">{{academic2.Cumulative_credit}}</td>
 					<td style="background-color: #e8e8e8; color: #2e3940;" width="20%" height="30px" align="center">{{academic2.GPAX}}</td>
 				</tr>
-				{%endfor%}
-			</table><br><br>
 
+			</table><br><br>
+			{%endfor%}
 		</div>
 
 	</body>

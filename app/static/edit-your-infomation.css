@@ -27,12 +27,31 @@
 	margin-bottom: 2%;
 	margin-left: 88%;
 	margin-top: 3%;
+	float: left;
 }
 
 .in2:hover , .in2:active{
 	background-color: #c1c1c1;
+}
+
+.cancle {
+	float: left;
+	font-family: "Open Sans Condensed";
+	padding-left: 5px;
+	border-radius:20px;
+	border: 5px;
+	height: 30px;
+	width: 100px;
+	background-color: #e8e8e8;
 	color: #2e3940;
 	box-shadow: -4px 5px #3c3e3d;
+	margin-bottom: 2%;
+	margin-left: 78%;
+	margin-top: -4.2%;
+}
+
+.cancle:hover , .cancle:active{
+	background-color: #c1c1c1;
 }
 
 .in3 {

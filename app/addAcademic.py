@@ -51,7 +51,7 @@ class Input_Academics:
 
 ################################################################
         count_row = 2
-        while(count_row < row - len(list_False_student)):
+        while(count_row < row):
             student_ID = all_student_ID[count_row]
             # print(student_ID)
 
@@ -104,11 +104,11 @@ class Input_Academics:
                 while(count_column < len(list_sub)):
                     student = Academic(Student_ID = int(student_ID),Term = str(input_term),
                      ID_Subject = str(list_sub[count_column]),Grade = str(list_grade[count_column]) )
-                    session.add(student)
+                    session.merge(student)
                     count_column += 1
                 gpa = Gpa(Student_ID = int(student_ID),Term = str(input_term),
                 sum_credit = int(term_credit),GPA = GPA)
-                session.add(gpa)
+                session.merge(gpa)
 #########################################################################
                 check = Check()
                 ckeck_id = check.gpax_student_id(student_ID)

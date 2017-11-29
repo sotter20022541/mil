@@ -77,9 +77,9 @@
     <div class="in">
 
 			<form id="contact-form" action="/selectView", method="POST">
-      <div align="center"><input type="submit" name="click" value="PROFILE" class="in2"></div>
-      <div align="center"><input type="submit" name="click" value="ACADEMIC" class="in2"></div>
-      <div align="center"><input type="submit" name="click" value="WORK&EXPERIENCE" class="in2"></div>
+      <div align="center"><input type="submit" name="click" value="PROFILE" class="in10" style="cursor:pointer"></div>
+      <div align="center"><input type="submit" name="click" value="ACADEMIC" class="in2" style="cursor:pointer"></div>
+      <div align="center"><input type="submit" name="click" value="WORK&EXPERIENCE" class="in2" style="cursor:pointer"></div>
 		  </form>
 
     </div>
@@ -88,18 +88,18 @@
 
 			{% for profile in page %}
       <div class="data-in"><b>Profile</b></div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Name : {{profile.Name}}  {{profile.Surname}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Date of Birth : {{profile.Dateofbirth}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Birthplate : {{profile.Birthplace}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Nationality : {{profile.Nation}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Congenital Disease : {{profile.Disease}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Contact : </div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number : {{profile.Phonestudent}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email : {{profile.Email}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address : {{profile.Address}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;Emergency contact : </div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number : {{profile.PhoneEmer}}</div>
-			<div class="data-in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relative : {{profile.Relative}}</div>
+			<div class="data-in2">Name :<div class="data-in3">{{profile.Name}}  {{profile.Surname}}</div></div>
+			<div class="data-in2">Date of Birth :<div class="data-in3">{{profile.Dateofbirth}}</div></div>
+			<div class="data-in2">Birthplate :<div class="data-in3">{{profile.Birthplace}}</div></div>
+			<div class="data-in2">Nationality :<div class="data-in3">{{profile.Nation}}</div></div>
+			<div class="data-in2">Congenital Disease :<div class="data-in3">{{profile.Disease}}</div></div>
+			<div class="data-in2">Contact</div>
+			<div class="data-in2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number :<div class="data-in3">{{profile.Phonestudent}}</div></div>
+			<div class="data-in2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email :<div class="data-in3">{{profile.Email}}</div></div>
+			<div class="data-in2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address :<div class="data-in3">{{profile.Address}}</div></div>
+			<div class="data-in2">Emergency contact</div>
+			<div class="data-in2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number :<div class="data-in3">{{profile.PhoneEmer}}</div></div>
+			<div class="data-in2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relative :<div class="data-in3">{{profile.Relative}}</div></div>
 			{%endfor%}
     </div>
 

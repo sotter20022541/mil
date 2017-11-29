@@ -39,7 +39,7 @@ class pullData():
     def Activity(self, getID):
         re = return_Method(getID)
         returnda = return_data(getID)
-        self.activity = returnda.DicAct(re.Act_name(), re.Act_des(), re.Act_photo(), re.Act_type(), re.Act_advisor(), re.Act_Date(), re.Act_file(), re.Act_confirm())
+        self.activity = returnda.DicAct(re.Act_id(),re.Act_name(), re.Act_des(), re.Act_photo(), re.Act_type(), re.Act_advisor(), re.Act_Date(), re.Act_file(), re.Act_confirm())
         return self.activity
 
     def Academic_term(self, getID, term = None):

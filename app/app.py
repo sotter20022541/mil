@@ -21,6 +21,7 @@ import shutil
 from shutil import copyfile
 import shutil
 from addAcademic import Input_Academics
+from sortTerm import*
 
 app = Flask(__name__)
 
@@ -30,7 +31,7 @@ pullData = pullData()
 editProfile = editProfile()
 editActivity = editActivity()
 saveText = saveText()
-
+sortTerm = sortTerm()
 
 '''---------------------------------------------------------------------------------------------------------------------------------------------------'''
 """ Login """
@@ -109,9 +110,22 @@ def menubar():
 	if getMenubar == 'ACADEMIC':
 		term = check.TERM(getID)
 		print (term)
+		term = sortTerm.sortTerm(term)
+		AllGrade = []
+		GPAX = []
+		for allTerm in term :
+			setG = {"Gragd":[],"GPA":[],"Term":""}
+			setG["Gragd"] = pullData.Academic_term(getID,allTerm)
+			setG["GPA"] = pullData.Academic_sum(getID,allTerm)
+			setG["Term"] = allTerm
+			AllGrade.append(setG)
+			if GPAX == []:
+				GPAX = pullData.Academic_sum(getID,allTerm)
 		term.append("All")
-		keepHistory.keep_page('AcademicStudent.html', pullData.Academic_term(getID),pullData.Academic_sum(getID))
-		return render_template('AcademicStudent.html', name=name, page=pullData.Academic_term(getID), page2=pullData.Academic_sum(getID), term = term )
+		print(AllGrade)
+		print(GPAX)
+		keepHistory.keep_page('AcademicStudent-3-table.html', AllGrade, GPAX)
+		return render_template('AcademicStudent-3-table.html', name=name,term = term,page= AllGrade, page2 = GPAX)
 	if getMenubar == 'WORK&EXPERIENCE':
 		keepHistory.keep_page('activity.html', pullData.Activity(getID))
 		print(pullData.Activity(getID))
@@ -131,6 +145,8 @@ def menubar():
 	if getMenubar == 'back':
 		print(getMenubar)
 		term = check.TERM(getID)
+		term = sortTerm.sortTerm(term)
+		term.append("All")
 		keepHistory.print_listPage()
 		history = keepHistory.history()
 		Value = keepHistory.Value_page()
@@ -159,7 +175,8 @@ def selectTerm():
 	check = Check()
 	term = check.TERM(getID)
 
-	#-----------------------------------------------------------------------------------------------------------------
+	term = sortTerm.sortTerm(term)
+
 	if getSelectTerm == "All":
 		AllGrade = []
 		GPAX = []
@@ -187,12 +204,22 @@ def moreinfo():
 	name = keepID.Name
 	print(getMoreinfo)
 
-	for nameAct in getMoreinfo:
+	for A in getMoreinfo:
+		Moreinfo = A.split(",")
+		nameActivity = Moreinfo[0]
+		idAct = Moreinfo[1]
+		print(nameActivity)
+		print(idAct)
 		for Act in pullData.Activity(getID):
-			if Act["Name_Activity"] == nameAct :
-				keepHistory.keep_page('dataactivity.html',Act)
-				print (Act)
-				return render_template('dataactivity.html', name=name, page= Act )
+			if Act["Name_Activity"] == nameActivity :
+				print(Act["Name_Activity"])
+				if str(Act["id"]) == idAct:
+					print(Act["id"])
+
+					keepHistory.keep_page('dataactivity.html',Act,"")
+					print (Act)
+					return render_template('dataactivity.html', name=name, page= Act , page2 = "")
+
 '''
 	if getMoreinfo == 'MORE INFO>>':
 		keepHistory.keep_page('dataactivity.html', pullData.Activity(getID))
@@ -206,7 +233,7 @@ def editInfo():
 	getID = keepID.ID
 	name = keepID.Name
 	if getEditInfo == 'EDIT':
-		keepHistory.keep_page('edit-your-infomation.html', None)
+		keepHistory.keep_page('profile.html', pullData.Profile(getID))  #hereeeeeeeeeeeeeeeeeeeee
 		return render_template('edit-your-infomation.html', name=name)
 
 @app.route('/editAcButton', methods=['POST'])
@@ -216,11 +243,18 @@ def editAcButton():
 	getID = keepID.ID
 	name = keepID.Name
 
-	for nameAct in getEditAc:
+	for A in getEditAc :
+		act = A.split(",")
+		nameActivity = act[0]
+		idAct = act[1]
+		print(nameActivity)
+		print(idAct)
+
 		for Act in pullData.Activity(getID):
-			if Act["Name_Activity"] == nameAct :
-				keepHistory.keep_page('dataactivity.html',Act)
-				return render_template('edit-activity.html', name=name, page= Act["Name_Activity"] )
+			if Act["Name_Activity"] == nameActivity :
+				if str(Act["id"]) == idAct:
+					keepHistory.keep_page('dataactivity.html',Act)
+					return render_template('edit-activity.html', name=name, page= Act["Name_Activity"], page2 = Act["id"])
 
 '''
 	if getEditAc == 'EDIT':
@@ -252,18 +286,26 @@ def getEditAc():
 	name = keepID.Name
 
 	print(getEditAc)
+	for i in getEditAc:
+		if getEditAc[i] == "SAVE":
+			act = i.split(",")
+			nameActivity = act[0]
+			idAct = act[1]
+			print(nameActivity)
+			print(idAct)
 
-	for nameAct in getEditAc:
-		if nameAct != 'type' and nameAct != 'advisor'and nameAct != 'des' and nameAct != 'date':
-			print(nameAct)
-			Name_act = nameAct
+	# for nameAct in getEditAc:
+	# 	if nameAct != 'type' and nameAct != 'advisor'and nameAct != 'des' and nameAct != 'date':
+	# 		print(nameAct)
+	# 		Name_act = nameAct
 
-	editActivity.edit(getID,Name_act,getEditAc)
+	editActivity.edit(getID,nameActivity,getEditAc,idAct)
 
 	for Act in pullData.Activity(getID):
-		if Act["Name_Activity"] == Name_act :
-			history = keepHistory.history()
-			return render_template(history , name=name, page= Act)
+		if Act["Name_Activity"] == nameActivity :
+			if str(Act["id"]) == idAct :
+				history = keepHistory.history()
+				return render_template(history , name=name, page= Act)
 
 @app.route('/checkBox', methods=['POST'])
 def getCheckBox():
@@ -341,12 +383,19 @@ def getAddAc():
 	print(getAddAc)
 
 	if getAddAc['photo'] != "":
-
 		save_path = 'C:/Users/' + str(os.getlogin()) + '/Desktop'
 		namephoto = getAddAc['photo']
 		inputfile = str(save_path) + '/' + str(namephoto)
 		print(namephoto)
 		copyto = 'C:/Users/' + str(os.getlogin()) + '/Documents/GitHub/FRA241_portfolio/app/static/pictures/activity/' + str(namephoto)
+		copyfile(inputfile,copyto)
+
+	if getAddAc['File'] != "":
+		save_path = 'C:/Users/' + str(os.getlogin()) + '/Desktop'
+		namefile = getAddAc['File']
+		inputfile = str(save_path) + '/' + str(namefile)
+		print(namefile)
+		copyto = 'C:/Users/' + str(os.getlogin()) + '/Documents/GitHub/FRA241_portfolio/app/static/Activity/' + str(namefile)
 		copyfile(inputfile,copyto)
 
 	editActivity.add(getID,getAddAc)
@@ -376,8 +425,9 @@ def getPrindataButton():   												#--------- save text -----------
 		os.remove(ffile)
 
 		history = keepHistory.history()
+		picS = keepID.picS
 		keepHistory.keep_page('homeStudent.html', None)
-		return render_template('homeStudent.html', name=name, id_user=getID)
+		return render_template('homeStudent.html', name=name, id_user=getID, picS = picS)
 	if button  == 'EDIT':
 		print('edit')
 		return render_template('print_choose.html', name=name, page=pullData.Activity(getID))
@@ -414,15 +464,57 @@ def getleave():
 @app.route('/deleteAc', methods=['POST'])
 def getDelete():
 	getDelete = dict(request.form.items())
+	print(getDelete)
 	getID = keepID.ID
 	name = keepID.Name
 	edit = Edit(getID)
-	for i in getDelete :
-		print(i)
-		edit.deleteAct(i)
+	for A in getDelete :
+		act = A.split(",")
+		nameActivity = act[0]
+		idAct = act[1]
+		print(nameActivity)
+		print(idAct)
+		edit.deleteAct(int(idAct),nameActivity)
 	history = keepHistory.history()
 	Value = pullData.Activity(getID)
 	return render_template(history,id_user=getID, name=name, page = Value)
+
+@app.route('/downloadFile', methods=['POST'])
+def downloadFile():
+	getFile = request.form['cilck']
+	getID = keepID.ID
+	name = keepID.Name
+	print(getFile)
+
+	if getFile != 'None' :
+		ffile = 'C:/Users/' + str(os.getlogin()) + '/Documents/GitHub/FRA241_portfolio/app/static/Activity/' + str(getFile)
+		copyto = 'C:/Users/' + str(os.getlogin()) + '/Desktop/' + str(getFile)
+		copyfile(ffile,copyto)
+
+		conf = 'Download ' + str(getFile) + ' Success'
+
+	else:
+		conf = "No File"
+
+	keepHistory.keep_page( None , None)
+	history = keepHistory.history()
+	Value = keepHistory.Value_page()
+	return render_template(history,id_user=getID, name=name, page = Value , page2 = conf)
+
+@app.route('/cancleEdit', methods=['POST'])
+def getCancle():
+	getCancle = request.form['click']
+	print(getCancle)
+	getID = keepID.ID
+	name = keepID.Name
+	picS = keepID.picS
+	keepHistory.print_listPage()
+	history = keepHistory.history()
+	Value = keepHistory.Value_page()
+	Value2 = keepHistory.Value2_page()
+	if history == 'activity.html':
+		Value = pullData.Activity(getID)
+	return render_template(history,id_user=getID, name=name, page = Value, page2 = Value2, picS = picS)
 
 
 '''end student'''
@@ -489,8 +581,22 @@ def frab():
 	name = keepID.Name
 	check = Check()
 	print (frab[5:])
-	dataFrab = check.FRAB(frab[5:])
-	print (dataFrab)
+
+	A = check.FRAB(frab[5:])
+	print (A)
+	x = []
+	dataFrab = []
+	for i in A:
+	    x.append(i["ID"])
+
+	x.sort()
+	for i in x:
+	    for j in A :
+	        if j["ID"] == i:
+	            dataFrab.append(j)
+	            A.remove(j)
+	print(dataFrab)
+
 	keepHistory.keep_page('nametea.html', dataFrab , frab)
 	return render_template('nametea.html', name=name, page = dataFrab , page2=frab)
 
@@ -528,9 +634,21 @@ def seect():
 		print('academic')
 		check = Check()
 		term = check.TERM(ID)
+		term = sortTerm.sortTerm(term)
+		AllGrade = []
+		GPAX = []
+		for allTerm in term :
+			setG = {"Gragd":[],"GPA":[],"Term":""}
+			setG["Gragd"] = pullData.Academic_term(ID,allTerm)
+			setG["GPA"] = pullData.Academic_sum(ID,allTerm)
+			setG["Term"] = allTerm
+			AllGrade.append(setG)
+			if GPAX == []:
+				GPAX = pullData.Academic_sum(ID,allTerm)
 		term.append("All")
-		print(term)
-		return render_template('teacherViewAcademic.html', name=name,term = term, picS = picS,page=pullData.Academic_term(getID) , page2=pullData.Academic_sum(getID) )
+		print(AllGrade)
+		print(GPAX)
+		return render_template('teacherViewAcademic-3-table.html', name=name,term = term, picS = picS,page= AllGrade, page2 = GPAX)
 	if select == 'WORK&EXPERIENCE':
 		print('activity')
 		activity = pullData.Activity(ID)
@@ -548,6 +666,8 @@ def TeacherSelectTerm():
 	picS = re.photo()
 	check = Check()
 	term = check.TERM(ID)
+
+	term = sortTerm.sortTerm(term)
 
 	if getSelectTerm == "All":
 		AllGrade = []
@@ -576,7 +696,7 @@ def fileGrade():
 	click = request.form['click']
 	filename = request.form['fileGrade']
 	term = request.form['term']
-	fileAdd = 'You was add : ' + str(filename)
+	fileAdd = str(filename) +" added."
 	print(filename)
 
 	if click == 'ADD':

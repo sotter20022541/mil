@@ -20,22 +20,21 @@
 			<div class="bar-in">
 
 				<div class="L">
-
 					<form id="contact-form" action="/menubar", method="POST">
-					<input type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="PROFILE" class="link">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="ACADEMIC" class="link">&nbsp;&nbsp;&nbsp;
-					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link1">
+					<input class="back" type="image" name="click" value="back" src="static/back_icon.jpg" width="4.5%">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="PROFILE" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="ACADEMIC" class="link" style="cursor:pointer">&nbsp;&nbsp;&nbsp;
+					<input type="submit" name="click" value="WORK&EXPERIENCE" class="link1" style="cursor:pointer">
 
 				</div>
 
 				<div class="R">
 
-					{{name}}&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
-					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="8.5%">&nbsp;&nbsp;&nbsp;
+					<div class="name-bar">{{name}}</div>&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="home_icon" src="static/home_icon.jpg" width="13.5%">&nbsp;&nbsp;&nbsp;
+					<input name="click" type="image" value="print_icon" src="static/print_icon.jpg" width="13.5%">&nbsp;&nbsp;&nbsp;
 					</form>
-					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="8.5%">
+					<input class="out" name="click" type="image" value="logout_icon" src="static/logout_icon.jpg" width="13.5%">
 
 				</div>
 
@@ -75,6 +74,14 @@
 			});
 
 		</script>
+
+		<form id="contact-form" action="/editAcButton", method="POST">
+		<input type = "submit" name={{page.Name_Activity}},{{page.id}} value = "EDIT" class = "in2" style="cursor:pointer">
+		</form>
+		<form id="contact-form" action="/deleteAc", method="POST">
+		<input type = "submit" name={{page.Name_Activity}},{{page.id}} value = "DELETE" class = "in3" style="cursor:pointer">
+		</form>
+
 		<div class="Activity">ACTIVITY</div>
 		<div class="group" >
 			<image src="static/pictures/activity/{{page.Photo}}" class="en1">
@@ -83,15 +90,12 @@
 			<div class="advisor">Advisor : {{page.Advisor}}</div>
 			<div class="type">Type : {{page.Type}}</div>
 			<div class="description">Description : {{page.Description}}</div>
-			<input type="submit" name="" value="File" class="more-info-link">
-
+			<form id="contact-form" action="/downloadFile", method="POST">
+			<div class="more-info">File : <input type="submit" name="cilck" value={{page.File}} class="more-info-link"></div>
+			<div class="more-info">{{page2}}</div>
+			</form>
 
 		</div>
-
-			<form id="contact-form" action="/editAcButton", method="POST">
-			<input type = "submit" name={{page.Name_Activity}},{{page.id}} value = "EDIT" class = "in2" >
-		  </form>
-			<input type = "submit" name={{page.Name_Activity}},{{page.id}} value = "DELETE" class = "in3" >
 
 	</body>
 
